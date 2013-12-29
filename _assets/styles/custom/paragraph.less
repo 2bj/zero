@@ -1,0 +1,36 @@
+p {
+	margin: 0 0 20px;
+
+	&.lead {
+		.caps;
+	}
+	&.caption {
+		.small;
+		margin: -18px 0 43px 0;
+	}
+	&.small-text {
+		.small;
+	}
+
+	&:last-child {
+		img, iframe {
+			margin-bottom: -110px;
+
+			@media screen and (max-width: 960px) {
+				margin-bottom: -50px;
+			}
+		}
+	}
+	&:first-child {
+		img, iframe {
+			margin-top: 7px;
+		}
+	}
+
+	.page & {
+		img, iframe {
+			margin-right: 0;
+			margin-left: -60px;
+		}
+	}
+}

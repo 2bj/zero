@@ -1,0 +1,21 @@
+.code {
+	font-family: 'PT Mono', monospace;
+	.fs( 14px, 24px );
+	background-color: lighten(@grey, 10%);
+	padding: 52px 120px 51px !important;
+	margin: 0 -120px 50px;
+	overflow: auto;
+	position: relative;
+	white-space: nowrap;
+
+	@media screen and (max-width: 960px) {
+		padding-left: 60px !important;
+		padding-right: 60px !important;
+		margin-left: -60px;
+		margin-right: -60px;
+	}
+
+	p + & {
+		margin-top: 50px;
+	}
+}

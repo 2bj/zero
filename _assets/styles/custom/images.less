@@ -1,0 +1,25 @@
+img {
+	vertical-align: middle;
+	background-color: darken(#d4d4d4, 10%);
+	display: block;
+	max-width: 960px;
+	height: auto !important;
+	margin: 50px -120px 50px;
+
+	@media screen and (max-width: 960px) {
+		max-width: 640px;
+		margin-left: -60px;
+		margin-right: -60px;
+	}
+
+	& + img {
+		margin-top: -50px !important;
+	}
+	&.aligncenter {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	.hr + p > & {
+		margin-top: 60px;
+	}
+}
