@@ -2236,9 +2236,6 @@ body {
 .post__share--color .share .share__caller .share__icon path {
   fill: #ed1c24;
 }
-#wpadminbar {
-  display: none;
-}
 @media print {
   * {
     background: transparent !important;
