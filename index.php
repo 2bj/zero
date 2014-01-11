@@ -1,7 +1,7 @@
 <?php
 
 $meta = merge_meta( array(
-	'title'	=> ( ( is_feed() || !trim( wp_title( false, false ) ) ) ? 'Блог' : wp_title( false, false ) )
+	'title'	=> ( ( is_feed() || !trim( wp_title( false, false ) ) ) ? LOGO : wp_title( false, false ) )
 ) );
 require( '_partials/head.php' );
 require( '_partials/header.php' );

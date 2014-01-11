@@ -1,5 +1,5 @@
 		<div class="credits">
-			<a href="http://cherenkevich.com/zero/" title="Zero by Cherenkevich">Zero by Cherenkevich</a>
+			<a href="http://cherenkevich.com/zero/" title="Zero Theme by Aleksey Cherenkevich">Zero</a>
 		</div>
 
 		<?php

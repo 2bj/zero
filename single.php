@@ -24,7 +24,7 @@ while ( have_posts() ) {
 		$meta_single['image'] = $cover;
 	}
 	if ( $lead ) {
-		$meta_single['description'] = $lead;
+		$meta_single['description'] = strip_tags( $lead );
 	}
 	$meta = merge_meta( $meta_single );
 

@@ -31,11 +31,11 @@ $custom_meta_fields = array(
 				'value'	=> 'none'
 			),
 			'under' => array (
-				'label' => 'Картинка под заголовком',
+				'label' => 'Под заголовком',
 				'value'	=> 'under'
 			),
 			'cover' => array (
-				'label' => 'Картинка-подложка',
+				'label' => 'Подложка',
 				'value'	=> 'cover'
 			)
 		)
@@ -94,6 +94,10 @@ $custom_meta_fields = array(
 				'label' => 'Черные',
 				'value'	=> 'black'
 			),
+			'color' => array (
+				'label' => 'Цветные',
+				'value'	=> 'color'
+			),
 		)
 	),
 );
@@ -124,7 +128,7 @@ echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce
 
 					// textarea
 					case 'textarea':
-						echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" rows="10">'.$meta.'</textarea>
+						echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" rows="10" style="width: 100%;">'.$meta.'</textarea>
 							<br /><span class="description">'.$field['desc'].'</span>';
 					break;
 

@@ -1,4 +1,4 @@
-iframe {
+.post__body iframe {
 	vertical-align: middle;
 	background-color: darken(#d4d4d4, 10%);
 	display: block;
@@ -9,10 +9,15 @@ iframe {
 
 	@media screen and (max-width: 960px) {
 		width: 640px;
-		height: 420px;
+		height: 420px !important;
 		max-width: 640px;
 		margin-left: -60px;
 		margin-right: -60px;
+	}
+	@media screen and (max-width: 720px) {
+		width: 480px;
+		max-width: 480px;
+		height: 320px !important;
 	}
 
 	.hr + p > & {

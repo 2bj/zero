@@ -1,9 +1,16 @@
 <div class="blog__item">
 	<div class="post">
 
+		<?php
+		$of_color = unserialize( $metaboxes['of_color'][0] );
+		if ( ! is_array( $of_color ) ) {
+			$of_color = array();
+		}
+		?>
+
 		<div class="post__header <?php echo ( $cover_type == 'cover' ? ' post__header--cover ' : '' ); ?>" <?php echo ( $cover_type == 'cover' ? ' style="background-image: url(' . $cover . ')" ' : '' ); ?>>
 
-			<h1 class="post__title <?php echo ( in_array( 'title_white', unserialize( $metaboxes['of_color'][0] ) ) ? ' post__title--white ' : '' ) ?>">
+			<h1 class="post__title <?php echo ( in_array( 'title_white', $of_color ) ? ' post__title--white ' : '' ) ?>">
 				<?php if ( ! is_single() ) : ?>
 				<a href="<?php the_permalink(); ?>" title="<?php echo strip_tags( $title ) ?>">
 					<?php echo ( $hidden_title ? '<br />' : $title )  ?>
@@ -20,7 +27,7 @@
 			</div>
 
 			<?php if ( $lead ) : ?>
-			<div class="post__lead <?php echo ( in_array( 'lead_white', unserialize( $metaboxes['of_color'][0] ) ) ? ' post__lead--white ' : '' ) ?>">
+			<div class="post__lead <?php echo ( in_array( 'lead_white', $of_color ) ? ' post__lead--white ' : '' ) ?>">
 				<?php echo $lead ?>
 			</div>
 			<?php endif; ?>

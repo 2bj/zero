@@ -60,7 +60,7 @@ function zero_scripts_and_styles() {
 	wp_register_script( 'social', FRONT . '/_assets/scripts/vendor/social-likes.min.js', array(  ), 1.0, true );
 	wp_register_script( 'scripts', FRONT . '/_assets/scripts/scripts.js', array( 'jquery', 'fotorama', 'social'  ), 1.0, true );
 
-	wp_register_style( 'styles', FRONT . '/_assets/styles/styles.css', null, 1.0, 'screen' );
+	wp_register_style( 'styles', FRONT . '/_assets/styles/styles.php', null, 1.0, 'screen' );
 
 	wp_enqueue_script( 'modernizer' );
 	wp_enqueue_script( 'scripts' );

@@ -4,19 +4,18 @@ ul {
 	list-style-type: none;
 
 	li {
-		margin: 0 0 10px;
+		margin: 0 0 0px;
 		padding: 0 0 0 0;
 		position: relative;
 
 		&:before {
 			content: '';
 			display: block;
-			background-color: @grey;
-			.wh(10px, 10px);
+			background-color: #000;
+			.wh(5px, 5px);
 			position: absolute;
-			top: 9px;
+			top: 14px;
 			left: -20px;
-			.border-radius(10px);
 		}
 	}
 }

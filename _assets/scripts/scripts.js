@@ -1,6 +1,9 @@
 ;
 ( function( $, window, document, undefined ) {
 
+	/**
+	 * Фоторама
+	 */
 	$( '.slider' )
 		.find( 'img' ).each( function() {
 			$( this ).data( 'caption', $( this ).attr( 'alt' ) );
@@ -17,5 +20,28 @@
 			'maxheight': 640
 		} );
 
+
+
+	$( '.share' )
+		.on( 'mouseenter', function() {
+			if ( $( window ).width() <= 720 ) {
+				$( this )
+					.parents( '.post' )
+						.find( '.post__title ' )
+							.css({
+								opacity: 0
+							});
+			}
+		} )
+		.on( 'mouseleave', function() {
+			if ( $( window ).width() <= 720 ) {
+				$( this )
+					.parents( '.post' )
+						.find( '.post__title ' )
+							.css({
+								opacity: 1
+							});
+			}
+		} );
 
 } )( jQuery, window, document );
