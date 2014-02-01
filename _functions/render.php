@@ -16,3 +16,49 @@ function zero_get_cover( $metaboxes ) {
 	}
 	return array( $cover_type, $cover, $lead );
 }
+
+function render_bg( $pos, $repeat, $fixed ) {
+	$bg_style = '';
+
+	switch ( $pos ) {
+		case 'topleft':
+			$bg_style = 'background-position: top left; ';
+			break;
+
+		case 'topright':
+			$bg_style = 'background-position: top right; ';
+			break;
+
+		default:
+			$bg_style = 'background-position: top center; ';
+			break;
+	}
+
+	switch ( $repeat ) {
+		case 'repeat':
+			$bg_style .= 'background-repeat: repeat; ';
+			break;
+
+		case 'repeat-x':
+			$bg_style .= 'background-repeat: repeat-x; ';
+			break;
+
+		case 'repeat-y':
+			$bg_style .= 'background-repeat: repeat-y; ';
+			break;
+
+		default:
+			$bg_style .= 'background-repeat: no-repeat; ';
+			break;
+	}
+
+	switch ( $fixed ) {
+		case 'fixed':
+			$bg_style .= 'background-attachment: fixed; ';
+			break;
+
+		default:
+			break;
+	}
+	return $bg_style;
+}

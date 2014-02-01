@@ -16,7 +16,7 @@ if ( have_posts() ) {
 		$metaboxes = $post_meta_data = get_post_custom($post->ID);
 
 		$hidden_title = unserialize( $metaboxes['of_header'][0] );
-		if ( $hidden_title[0] == 'title_no' ) {
+		if ( $hidden_title[0] == 'title_no' || !trim( $title ) ) {
 			$hidden_title = true;
 		} else {
 			$hidden_title = false;

@@ -6,54 +6,14 @@ echo file_get_contents( 'styles.css' );
 define('WP_USE_THEMES', false);
 require('../../../../../wp-blog-header.php');
 
-$bg_position = '';
-switch ( get_theme_mod( 'zero_theme_bg_image_position' ) ) {
-	case 'topleft':
-		$bg_position = 'background-position: top left; ';
-		break;
-
-	case 'topright':
-		$bg_position = 'background-position: top right; ';
-		break;
-
-	default:
-		$bg_position = 'background-position: center; ';
-		break;
-}
-
-switch ( get_theme_mod( 'zero_theme_bg_image_repeat' ) ) {
-	case 'repeat':
-		$bg_position .= 'background-repeat: repeat; ';
-		break;
-
-	case 'repeat-x':
-		$bg_position .= 'background-repeat: repeat-x; ';
-		break;
-
-	case 'repeat-y':
-		$bg_position .= 'background-repeat: repeat-y; ';
-		break;
-
-	default:
-		$bg_position .= 'background-repeat: no-repeat; ';
-		break;
-}
-
-switch ( get_theme_mod( 'zero_theme_bg_image_fixed' ) ) {
-	case 'fixed':
-		$bg_position .= 'background-attachment: fixed; ';
-		break;
-
-	default:
-		break;
-}
+$bg_style = render_bg( get_theme_mod( 'zero_theme_bg_image_position' ), get_theme_mod( 'zero_theme_bg_image_repeat' ), get_theme_mod( 'zero_theme_bg_image_fixed' ) );
 
 ?>
 
 body, .hr {
 	background-color: <?php echo get_theme_mod( 'zero_theme_bg' ); ?>;
 	background-image: <?php echo ( get_theme_mod( 'zero_theme_bg_image' ) ? 'url(' . get_theme_mod( 'zero_theme_bg_image' ) . ');' : 'none' ) ?>
-	<?php echo $bg_position; ?>
+	<?php echo $bg_style; ?>
 }
 a,
 .nav li.current_page_item a,

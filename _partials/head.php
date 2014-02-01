@@ -34,7 +34,7 @@
 		<?php endif; ?>
 
 	</head>
-	<body>
+	<body style="<?php echo $bg_style; ?>">
 		<?php if ( trim( get_theme_mod( 'zero_og_fb_appId' ) ) ) : ?>
 		<div id="fb-root"></div>
 		<script>(function(d, s, id) {

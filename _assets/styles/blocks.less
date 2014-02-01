@@ -407,8 +407,11 @@ body {
 }
 
 .fotorama__stage {
-	background-color: #282828;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAPoCAYAAAAftpReAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU1QTBBMDk1ODMzRDExRTNCNzM3QjlBQ0VCMkRBNTgwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU1QTBBMDk2ODMzRDExRTNCNzM3QjlBQ0VCMkRBNTgwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTVBMEEwOTM4MzNEMTFFM0I3MzdCOUFDRUIyREE1ODAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTVBMEEwOTQ4MzNEMTFFM0I3MzdCOUFDRUIyREE1ODAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4mdO6/AAAAKUlEQVR42uzEMQEAMAgDMEBN/RscmNiXHKkkb+pIkiRJkiRJ+lSvAAMA6KUJR53z6p4AAAAASUVORK5CYII=');
+	background-repeat: repeat-x;
+	background-position: left bottom;
 }
+
 
 .post-date, .pagination {
 	.caps;
@@ -447,6 +450,7 @@ body {
 .fotorama__caption {
 	bottom: 60px;
 	left: 0;
+	text-align: left;
 
 	.fotorama__caption__wrap {
 		color: #000;
@@ -531,13 +535,14 @@ body {
 		text-align: right;
 		.opacity(0);
 		.transition;
-		right: 26px;
+		right: 46px;
 		top: 45px;
 		position: absolute;
-		width: 300px;
+		width: 400px;
 
 		.share__item {
 			width: 90px;
+			padding-left: 20px;
 			.inline-block;
 		}
 	}
@@ -606,5 +611,27 @@ body {
 			}
 		}
 	}
+}
 
+.comments {
+	width: 960px;
+	margin: -75px 0 0 60px;
+	padding: 112px 120px 100px 120px;
+	background-color: #fff;
+
+	@media screen and (max-width: 1080px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media screen and (max-width: 960px) {
+		width: 640px;
+	}
+	@media screen and (max-width: 720px) {
+		padding-left: 60px;
+		width: 480px;
+	}
+}
+#disqus_thread iframe {
+	width: 100%;
+	max-width: 100%;
 }

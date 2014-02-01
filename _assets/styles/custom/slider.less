@@ -3,6 +3,7 @@
 	max-width: 960px;
 	height: auto !important;
 	margin: 0px -120px 50px;
+	text-align: center;
 
 	&:last-child {
 		margin-bottom: -92px;
@@ -14,6 +15,13 @@
 
 	img {
 		margin: 0;
+		max-height: 640px;
+		width: auto;
+		display: inline;
+
+		& + img {
+			margin-top: 0px !important;
+		}
 	}
 
 	@media screen and (max-width: 960px) {

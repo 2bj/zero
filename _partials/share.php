@@ -32,7 +32,7 @@ if ( is_numeric( $twitter->count ) ) {
 	<div class="share__buttons">
 
 		<?php if ( trim( get_theme_mod( 'zero_og_fb_appId' ) ) ) : ?>
-		<div class="share__item">
+		<div class="share__item" style="padding-top: 1px;">
 			<div class="fb-like" data-href="<?php echo $post_item['link'] ?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
 		</div>
 		<?php endif; ?>

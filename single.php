@@ -6,7 +6,7 @@ while ( have_posts() ) {
 	$metaboxes = $post_meta_data = get_post_custom($post->ID);
 
 	$hidden_title = unserialize( $metaboxes['of_header'][0] );
-	if ( $hidden_title[0] == 'title_no' ) {
+	if ( $hidden_title[0] == 'title_no' || !trim( $title ) ) {
 		$hidden_title = true;
 	} else {
 		$hidden_title = false;
@@ -28,6 +28,12 @@ while ( have_posts() ) {
 	}
 	$meta = merge_meta( $meta_single );
 
+	if ( $metaboxes['of_bg_image'][0] ) {
+		$bg_style = render_bg( $metaboxes['of_bg_position'][0], $metaboxes['of_bg_repeat'][0], $metaboxes['of_bg_attachment'][0] );
+		$bg_image = wp_get_attachment_image_src( $metaboxes['of_bg_image'][0], 'full' );
+		$bg_style .= ' background-image: url(' . $bg_image[0] . '); ';
+	}
+
 	require( '_partials/head.php' );
 	require( '_partials/header.php' );
 
@@ -40,16 +46,23 @@ while ( have_posts() ) {
 		<?php echo render_date( get_the_date() ); ?>
 	</div>
 
-	<!--<div class="comments">
-
-		<?php
-		$page_url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-		$page_url = explode( '?', $page_url );
-		$page_url = $page_url[0];
-		?>
-
-		<div class="fb-comments" data-width="720" data-href="<?php echo $page_url; ?>" data-numposts="5" data-colorscheme="light"></div>
-	</div>-->
+	<?php if ( get_theme_mod( 'zero_og_disqus' ) ) : ?>
+	<div class="comments">
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = '<?php echo get_theme_mod( 'zero_og_disqus' ); ?>'; // required: replace example with your forum shortname
+			var disqus_disable_mobile = true;
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	</div>
+	<?php endif; ?>
 
 <?php } ?>
 

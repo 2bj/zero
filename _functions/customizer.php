@@ -194,7 +194,7 @@ function zero_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'zero_og',
 		array(
-			'title'			=> 'Соц. сетки',
+			'title'			=> 'Лайки, комменты и т. д.',
 			'priority'	=> 200
 		)
 	);
@@ -284,6 +284,24 @@ function zero_register_theme_customizer( $wp_customize ) {
 		array(
 			'section'	=> 'zero_og',
 			'label'		=> 'appId для FB-лайков',
+			'type'		=> 'text'
+		)
+	);
+
+	/**
+	 * Настройка Disqus
+	 */
+	$wp_customize->add_setting(
+		'zero_og_disqus',
+		array(
+			'default'	=> ''
+		)
+	);
+	$wp_customize->add_control(
+		'zero_og_disqus',
+		array(
+			'section'	=> 'zero_og',
+			'label'		=> 'Логин сайта на Disqus',
 			'type'		=> 'text'
 		)
 	);
@@ -473,4 +491,25 @@ if ( get_theme_mod( 'zero_admin_simplify' ) ) {
 		</style>
 		<?php
 	}
+}
+
+/**
+ * Кое-что в админке
+ */
+add_action( 'admin_head', 'zero_admin_styles' );
+function zero_admin_styles() {
+	?>
+	<style type="text/css">
+		.jaxtag input[type="text"] {
+			width: 166px;
+		}
+		#screen-meta-links,
+		.autosave-info,
+		input#shortlink + a.button,
+		.jaxtag .howto,
+		.misc-pub-visibility {
+			display: none !important;
+		}
+	</style>
+	<?php
 }
