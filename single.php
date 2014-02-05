@@ -1,4 +1,10 @@
 <?php
+
+if ( strpos( $_SERVER['REQUEST_URI'], "fb_action_ids") ) {
+	$uri = explode( "?", $_SERVER['REQUEST_URI'] );
+	header( "location: " . $uri[0] );
+}
+
 while ( have_posts() ) {
 	the_post();
 
