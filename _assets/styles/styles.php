@@ -47,18 +47,8 @@ if ( get_theme_mod( 'zero_theme_layout' ) == 'center' ) {
 	.header, .pagination, .post-date {
 		padding-left: 0;
 	}
-	@media screen and (max-width: 960px) {
-		.header, .pagination, .post-date, .page {
-			padding-left: 60px;
-		}
-	}
-	.page p img {
+	.page p img, .page p iframe {
 		margin-left: 0;
-	}
-	@media screen and (max-width: 960px) {
-		.page p img {
-			margin-left: -60px;
-		}
 	}
 	<?php
 }
