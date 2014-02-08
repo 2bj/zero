@@ -413,7 +413,7 @@ body {
 }
 
 
-.post-date, .pagination {
+.pagination {
 	.caps;
 	color: darken( @grey, 40% );
 	padding: 0 0 54px 60px;
@@ -434,19 +434,6 @@ body {
 	}
 }
 
-.post-date {
-
-	@media screen and (max-width: 1080px) {
-
-	}
-	@media screen and (max-width: 960px) {
-		margin-top: -68px;
-	}
-	@media screen and (max-width: 720px) {
-
-	}
-}
-
 .fotorama__caption {
 	bottom: 60px;
 	left: 0;
@@ -463,57 +450,6 @@ body {
 		padding: 11px 19px 9px;
 		width: auto !important;
 		min-width: 0 !important;
-	}
-}
-
-.pagination {
-	position: relative;
-	left: -15px;
-	margin-top: -74px;
-	margin-bottom: 0px;
-	padding-bottom: 44px;
-	font-size: 0;
-
-	@media screen and (max-width: 960px) {
-		margin-top: 3px;
-	}
-
-	.page-numbers {
-		.color;
-		padding: 10px 15px;
-		.caps;
-
-		&.next, &.prev {
-			display: none;
-		}
-	}
-	a.page-numbers {
-		color: darken( @grey, 40% );
-		&:hover {
-			.color;
-		}
-	}
-}
-
-.credits {
-	text-align: right;
-	padding: 0 60px 12px;
-	margin-top: -77px;
-	.caps;
-
-	a {
-		color: darken(@grey, 10%);
-
-		&:hover {
-			color: @color;
-		}
-	}
-
-	.post-date + & {
-		margin-top: -153px;
-	}
-	.page + & {
-		padding-bottom: 49px;
 	}
 }
 
@@ -613,10 +549,105 @@ body {
 	}
 }
 
+
+.pagination {
+	position: relative;
+	left: -15px;
+	margin-top: -74px;
+	margin-bottom: 0px;
+	padding-bottom: 44px;
+	font-size: 0;
+
+	@media screen and (max-width: 960px) {
+		margin-top: 3px;
+	}
+
+	.page-numbers {
+		.color;
+		padding: 10px 15px;
+		.caps;
+
+		&.next, &.prev {
+			display: none;
+		}
+	}
+	a.page-numbers {
+		color: darken( @grey, 40% );
+		&:hover {
+			.color;
+		}
+	}
+}
+
+.post-meta {
+	.clearfix;
+	width: 960px;
+	margin: -189px 0 49px 60px;
+
+	.post-meta__date {
+		float: left;
+		width: 200px;
+	}
+	.post-meta__tags {
+		float: right;
+		width: 480px;
+		text-align: right;
+	}
+}
+
+.post-date {
+	.caps;
+}
+
+.tags {
+	.inline-list;
+	.caps;
+	li {
+		margin-left: 28px;
+		&:before {
+			content: none;
+		}
+		a {
+
+		}
+	}
+}
+
+.credits {
+	text-align: right;
+	width: 960px;
+	margin: -78px 0 0 60px;
+	.caps;
+	clear: both;
+
+	a {
+		position: relative;
+		z-index: 999;
+		color: darken(@grey, 10%);
+
+		&:hover {
+			color: @color;
+		}
+	}
+	.comments + & {
+		padding-right: 118px;
+	}
+	.post-meta + & {
+		margin-top: -12px;
+		margin-bottom: 50px;
+	}
+	.page + & {
+		margin-left: 0;
+		margin-top: -7px;
+		position: relative;
+		top: -49px;
+	}
+}
+
 .comments {
 	width: 960px;
-	margin: -75px 0 0 60px;
-	padding: 112px 120px 100px 120px;
+	margin: 0 0 0 60px;
+	padding: 112px 120px 109px 120px;
 	background-color: #fff;
 
 	@media screen and (max-width: 1080px) {

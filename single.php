@@ -48,8 +48,24 @@ while ( have_posts() ) {
 	echo '</section>';
 	?>
 
-	<div class="post-date">
-		<?php echo render_date( get_the_date() ); ?>
+	<div class="post-meta">
+		<div class="post-meta__date">
+			<div class="post-date">
+				<?php echo render_date( get_the_date() ); ?>
+			</div>
+		</div>
+		<div class="post-meta__tags">
+			<ul class="tags">
+			<?php
+			$tags = get_the_tags();
+			if ( ! empty( $tags ) ) {
+				foreach ( $tags as $tag ) {
+					echo '<li><a href="' . get_tag_link( $tag->term_id ) . '" title="' . $tag->name . '">' . $tag->name . '</a></li>';
+				}
+			}
+			?>
+			</ul>
+		</div>
 	</div>
 
 	<?php if ( get_theme_mod( 'zero_og_disqus' ) ) : ?>

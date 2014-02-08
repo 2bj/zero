@@ -54,13 +54,12 @@ function zero_scripts_and_styles() {
 		wp_deregister_script( 'jquery' );
 	}
 
-	wp_register_script( 'modernizer', FRONT . '/_assets/scripts/vendor/modernizr-2.6.2.min.js', array(  ), 1.0, false );
-	wp_register_script( 'jquery', FRONT . '/_assets/scripts/vendor/jquery-1.10.2.min.js', array(  ), 1.0, true );
-	wp_register_script( 'fotorama', FRONT . '/_assets/scripts/vendor/fotorama.js', array(  ), 1.0, true );
-	wp_register_script( 'social', FRONT . '/_assets/scripts/vendor/social-likes.min.js', array(  ), 1.0, true );
-	wp_register_script( 'scripts', FRONT . '/_assets/scripts/scripts.js', array( 'jquery', 'fotorama', 'social'  ), 1.0, true );
+	wp_register_script( 'modernizer', FRONT . '/_assets/scripts/vendor/modernizr-2.6.2.min.js', array(  ), 2.6, false );
+	wp_register_script( 'jquery', FRONT . '/_assets/scripts/vendor/jquery-1.10.2.min.js', array(  ), 1.10, true );
+	wp_register_script( 'fotorama', FRONT . '/_assets/scripts/vendor/fotorama.js', array(  ), 4.4, true );
+	wp_register_script( 'scripts', FRONT . '/_assets/scripts/scripts.js', array( 'jquery', 'fotorama' ), 0.6, true );
 
-	wp_register_style( 'styles', FRONT . '/_assets/styles/styles.php', null, 1.0, 'screen' );
+	wp_register_style( 'styles', FRONT . '/_assets/styles/styles.php', null, 0.6, 'screen' );
 
 	wp_enqueue_script( 'modernizer' );
 	wp_enqueue_script( 'scripts' );

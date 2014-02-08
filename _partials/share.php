@@ -8,24 +8,24 @@ $post_item = array(
 	'image' => $cover,
 );
 
-if ( trim( get_theme_mod( 'zero_og_fb_appId' ) ) ) {
-	$fb = json_decode( file_get_contents( 'http://graph.facebook.com/' . $post_item['link'] ) );
-	if ( is_numeric( $fb->shares ) ) {
-		$counter += $fb->shares;
-	}
-}
+// if ( trim( get_theme_mod( 'zero_og_fb_appId' ) ) ) {
+// 	$fb = json_decode( file_get_contents( 'http://graph.facebook.com/' . $post_item['link'] ) );
+// 	if ( is_numeric( $fb->shares ) ) {
+// 		$counter += $fb->shares;
+// 	}
+// }
 
-if ( trim( get_theme_mod( 'zero_og_vk' ) ) ) {
-	$vk = json_decode( file_get_contents( 'https://api.vk.com/method/likes.getList?type=sitepage&owner_id=' . get_theme_mod( 'zero_og_vk' ) . '&page_url=' . $post_item['link'] ) );
-	if ( is_numeric( $vk->response->count ) ) {
-		$counter += $vk->response->count;
-	}
-}
+// if ( trim( get_theme_mod( 'zero_og_vk' ) ) ) {
+// 	$vk = json_decode( file_get_contents( 'https://api.vk.com/method/likes.getList?type=sitepage&owner_id=' . get_theme_mod( 'zero_og_vk' ) . '&page_url=' . $post_item['link'] ) );
+// 	if ( is_numeric( $vk->response->count ) ) {
+// 		$counter += $vk->response->count;
+// 	}
+// }
 
-$twitter = json_decode( file_get_contents( 'http://urls.api.twitter.com/1/urls/count.json?url=' . $post_item['link'] ) );
-if ( is_numeric( $twitter->count ) ) {
-	$counter += $twitter->count;
-}
+// $twitter = json_decode( file_get_contents( 'http://urls.api.twitter.com/1/urls/count.json?url=' . $post_item['link'] ) );
+// if ( is_numeric( $twitter->count ) ) {
+// 	$counter += $twitter->count;
+// }
 
 ?>
 <div class="share">

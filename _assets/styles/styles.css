@@ -2034,7 +2034,6 @@ body {
   background-repeat: repeat-x;
   background-position: left bottom;
 }
-.post-date,
 .pagination {
   font-family: 'PT Sans Caption', sans-serif;
   text-transform: uppercase;
@@ -2047,7 +2046,6 @@ body {
   width: 960px;
 }
 @media screen and (max-width: 1080px) {
-  .post-date,
   .pagination {
     margin-left: auto;
     margin-right: auto;
@@ -2055,28 +2053,15 @@ body {
   }
 }
 @media screen and (max-width: 960px) {
-  .post-date,
   .pagination {
     width: 640px;
   }
 }
 @media screen and (max-width: 720px) {
-  .post-date,
   .pagination {
     padding-left: 60px;
     width: 480px;
   }
-}
-@media screen and (max-width: 1080px) {
-  
-}
-@media screen and (max-width: 960px) {
-  .post-date {
-    margin-top: -68px;
-  }
-}
-@media screen and (max-width: 720px) {
-  
 }
 .fotorama__caption {
   bottom: 60px;
@@ -2097,60 +2082,6 @@ body {
   padding: 11px 19px 9px;
   width: auto !important;
   min-width: 0 !important;
-}
-.pagination {
-  position: relative;
-  left: -15px;
-  margin-top: -74px;
-  margin-bottom: 0px;
-  padding-bottom: 44px;
-  font-size: 0;
-}
-@media screen and (max-width: 960px) {
-  .pagination {
-    margin-top: 3px;
-  }
-}
-.pagination .page-numbers {
-  color: #ed1c24;
-  padding: 10px 15px;
-  font-family: 'PT Sans Caption', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 13px;
-  font-weight: bold;
-}
-.pagination .page-numbers.next,
-.pagination .page-numbers.prev {
-  display: none;
-}
-.pagination a.page-numbers {
-  color: #7b7b7b;
-}
-.pagination a.page-numbers:hover {
-  color: #ed1c24;
-}
-.credits {
-  text-align: right;
-  padding: 0 60px 12px;
-  margin-top: -77px;
-  font-family: 'PT Sans Caption', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 13px;
-  font-weight: bold;
-}
-.credits a {
-  color: #c8c8c8;
-}
-.credits a:hover {
-  color: #ed1c24;
-}
-.post-date + .credits {
-  margin-top: -153px;
-}
-.page + .credits {
-  padding-bottom: 49px;
 }
 .slider img {
   max-width: 100% !important;
@@ -2246,10 +2177,131 @@ body {
 .post__share--color .share .share__caller .share__icon path {
   fill: #ed1c24;
 }
+.pagination {
+  position: relative;
+  left: -15px;
+  margin-top: -74px;
+  margin-bottom: 0px;
+  padding-bottom: 44px;
+  font-size: 0;
+}
+@media screen and (max-width: 960px) {
+  .pagination {
+    margin-top: 3px;
+  }
+}
+.pagination .page-numbers {
+  color: #ed1c24;
+  padding: 10px 15px;
+  font-family: 'PT Sans Caption', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.pagination .page-numbers.next,
+.pagination .page-numbers.prev {
+  display: none;
+}
+.pagination a.page-numbers {
+  color: #7b7b7b;
+}
+.pagination a.page-numbers:hover {
+  color: #ed1c24;
+}
+.post-meta {
+  *zoom: 1;
+  width: 960px;
+  margin: -189px 0 49px 60px;
+}
+.post-meta:before,
+.post-meta:after {
+  content: " ";
+  display: table;
+}
+.post-meta:after {
+  clear: both;
+}
+.post-meta .post-meta__date {
+  float: left;
+  width: 200px;
+}
+.post-meta .post-meta__tags {
+  float: right;
+  width: 480px;
+  text-align: right;
+}
+.post-date {
+  font-family: 'PT Sans Caption', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans Caption', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.tags li {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  list-style-image: none;
+  list-style-type: none;
+}
+.tags li {
+  margin-left: 28px;
+}
+.tags li:before {
+  content: none;
+}
+.credits {
+  text-align: right;
+  width: 960px;
+  margin: -78px 0 0 60px;
+  font-family: 'PT Sans Caption', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bold;
+  clear: both;
+}
+.credits a {
+  position: relative;
+  z-index: 999;
+  color: #c8c8c8;
+}
+.credits a:hover {
+  color: #ed1c24;
+}
+.comments + .credits {
+  padding-right: 118px;
+}
+.post-meta + .credits {
+  margin-top: -12px;
+  margin-bottom: 50px;
+}
+.page + .credits {
+  margin-left: 0;
+  margin-top: -7px;
+  position: relative;
+  top: -49px;
+}
 .comments {
   width: 960px;
-  margin: -75px 0 0 60px;
-  padding: 112px 120px 100px 120px;
+  margin: 0 0 0 60px;
+  padding: 112px 120px 109px 120px;
   background-color: #fff;
 }
 @media screen and (max-width: 1080px) {

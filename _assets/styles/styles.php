@@ -40,9 +40,9 @@ if ( get_theme_mod( 'zero_css_code' ) ) {
 
 if ( get_theme_mod( 'zero_theme_layout' ) == 'center' ) {
 	?>
-	.blog, .header, .pagination, .post-date, .page {
-		margin-left: auto;
-		margin-right: auto;
+	.blog, .header, .pagination, .post-meta, .page, .comments, .credits {
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
 	.header, .pagination, .post-date {
 		padding-left: 0;
