@@ -13,9 +13,9 @@
 		<meta property="og:title" content="<?php echo $meta['title'] ?>">
 		<meta property="og:description" content="<?php echo $meta['description'] ?>">
 		<meta property="og:image" content="<?php echo $meta['image'] ?>">
+		<meta property="og:site_name" content="<?php echo LOGO; ?>">
 		<?php do_action('og_extras'); ?>
 
-		<meta property="og:site_name" content="<?php echo LOGO; ?>">
 		<meta property="fb:admins" content="<?php echo get_theme_mod( 'zero_og_fb' ); ?>" />
 		<meta name="twitter:card" value="summary">
 		<meta name="twitter:site" value="<?php echo get_theme_mod( 'zero_og_twitter' ); ?>">
