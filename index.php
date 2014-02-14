@@ -1,5 +1,17 @@
 <?php
 
+function zero_html_attributes() {
+	echo ' prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#"';
+}
+add_action('html_attributes', 'zero_html_attributes');
+
+function zero_og_extras() {
+	echo "\n";
+	echo "\t\t<meta property=\"og:type\" content=\"website\">";
+}
+add_action('og_extras', 'zero_og_extras');
+
+
 $meta = merge_meta( array(
 	'title'	=> ( ( is_feed() || !trim( wp_title( false, false ) ) ) ? LOGO : wp_title( false, false ) )
 ) );

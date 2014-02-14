@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE 8]>	 <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"<?php do_action('html_attributes'); ?>> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -13,7 +13,7 @@
 		<meta property="og:title" content="<?php echo $meta['title'] ?>">
 		<meta property="og:description" content="<?php echo $meta['description'] ?>">
 		<meta property="og:image" content="<?php echo $meta['image'] ?>">
-		<meta property="og:type" content="article">
+		<?php do_action('og_extras'); ?>
 
 		<meta property="og:site_name" content="<?php echo LOGO; ?>">
 		<meta property="fb:admins" content="<?php echo get_theme_mod( 'zero_og_fb' ); ?>" />

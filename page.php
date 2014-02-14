@@ -1,6 +1,19 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 <?php
+
+function zero_html_attributes() {
+	echo ' prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"';
+}
+add_action('html_attributes', 'zero_html_attributes');
+
+function zero_og_extras() {
+	echo "\n";
+	echo "\t\t<meta property=\"og:type\" content=\"article\">";
+}
+add_action('og_extras', 'zero_og_extras');
+
+
 $meta = merge_meta( array(
 	'title' 			=> wp_title( false, false )
 ) );
