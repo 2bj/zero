@@ -83,6 +83,7 @@ body {
 	background-color: #fff;
 	/*border: 1px solid @grey;*/
 	padding: 120px 120px 0;
+	overflow: hidden;
 
 	.post__header {
 		.clearfix;
@@ -103,52 +104,9 @@ body {
 				color: #000;
 
 				&:hover {
-					.color;
+					.color !important;
 				}
 			}
-			&.post__title--white {
-				color: #fff;
-				a {
-					color: #fff;
-
-					&:hover {
-						.color;
-					}
-				}
-			}
-		}
-
-		.post__quote {
-			.large;
-			margin: -10px 0 29px 0;
-
-			.large-text {
-				margin: 0;
-				padding: 0;
-			}
-
-			&.post__quote--white {
-				color: #fff;
-			}
-		}
-		.post__quote-author {
-			width: 55%;
-			float: left;
-			margin-top: -11px;
-
-			&.post__quote-author--white {
-				a {
-					color: #fff;
-					&:hover {
-						.color;
-					}
-				}
-			}
-		}
-
-		.post__quote-meta {
-			.clearfix;
-			margin-bottom: -9px;
 		}
 
 		.post__meta {
@@ -176,10 +134,6 @@ body {
 			left: 120px;
 			width: 55%;
 			.caps;
-
-			&.post__lead--white {
-				color: #fff;
-			}
 		}
 
 		&.post__header--cover {
@@ -414,6 +368,9 @@ body {
 
 		&.next, &.prev {
 			display: none;
+		}
+		&.dots {
+			color: darken( @grey, 40% );
 		}
 	}
 	a.page-numbers {

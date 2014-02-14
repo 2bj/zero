@@ -1,5 +1,7 @@
 jQuery( function( $ ) {
 
+	$('.colorpicker').wpColorPicker();
+
 	if ( $( 'div#of_post_cover' ).length ) {
 
 		coverOptions( $( 'input[name="of_cover_type"]:checked' ).val() );

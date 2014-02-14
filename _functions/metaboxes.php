@@ -19,6 +19,23 @@ function of_render_cover() {
 	show_custom_meta_box( $cover_fields );
 }
 
+// Add the Meta Box
+function of_color_add() {
+	add_meta_box(
+		'of_post_color', // $id
+		'Color options', // $title
+		'of_render_color', // $callback
+		'post', // $page
+		'side', // $context
+		'low'); // $priority
+}
+add_action('add_meta_boxes', 'of_color_add');
+
+function of_render_color() {
+	global $color_fields;
+	show_custom_meta_box( $color_fields );
+}
+
 // // Add the Meta Box
 // function of_bg_add() {
 // 	add_meta_box(
@@ -38,6 +55,7 @@ function of_render_cover() {
 
 $custom_meta_fields = array();
 $custom_meta_fields = array_merge( $cover_fields, $custom_meta_fields );
+$custom_meta_fields = array_merge( $color_fields, $custom_meta_fields );
 $custom_meta_fields = array_merge( $bg_fields, $custom_meta_fields );
 
 
@@ -50,34 +68,34 @@ function show_custom_meta_box( $custom_meta_fields ) {
 	echo '<input type="hidden" name="custom_meta_box_nonce" value="' . wp_create_nonce( basename( __FILE__ ) ) . '" />';
 
 	// Begin the field table and loop
-	echo '<table class="form-table">';
+	echo '<div class="metabox-form">';
 	foreach ( $custom_meta_fields as $field ) {
 
 		// get value of this field if it exists for this post
 		$meta = get_post_meta( $post->ID, $field['id'], true );
 
 		// begin a table row with
-		echo '<tr>
-				<th style="width: 25%;"><label for="' . $field['id'] . '">' . $field['label'] . '</label></th>
-				<td>';
+		echo '<div class="metabox-form__item">
+				<div class="metabox-form__label"><label for="' . $field['id'] . '">' . $field['label'] . '</label></div>
+				<div class="metabox-form__value">';
 				switch( $field['type'] ) {
 
 					// text
 					case 'text':
-						echo '<input type="text" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" size="30" />
-							<br /><span class="description">' . $field['desc'] . '</span>';
+						echo '<input type="text" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" style="width: 100%;" />
+									<div class="metabox-form__description">' . $field['desc'] . '</div>';
 						break;
 
 					// textarea
 					case 'textarea':
 						echo '<textarea name="' . $field['id'] . '" id="' . $field['id'] . '" rows="10" style="width: 100%;">' . $meta . '</textarea>
-							<br /><span class="description">' . $field['desc'] . '</span>';
+									<div class="metabox-form__description">' . $field['desc'] . '</div>';
 						break;
 
 					// checkbox
 					case 'checkbox':
 						echo '<input type="checkbox" name="' . $field['id'] . '" id="' . $field['id'] . '" ', $meta ? ' checked="checked"' : '','/>
-							<label for="' . $field['id'] . '">' . $field['desc'] . '</label>';
+									<label for="' . $field['id'] . '">' . $field['desc'] . '</label>';
 						break;
 
 					// select
@@ -86,7 +104,8 @@ function show_custom_meta_box( $custom_meta_fields ) {
 						foreach ( $field['options'] as $option ) {
 							echo '<option', $meta == $option['value'] ? ' selected="selected"' : '', ' value="' . $option['value'] . '">' . $option['label'] .'</option>';
 						}
-						echo '</select><br /><span class="description">' . $field['desc'] . '</span>';
+						echo '</select>
+									<div class="metabox-form__description">' . $field['desc'] . '</div>';
 						break;
 
 					// radio
@@ -113,7 +132,7 @@ function show_custom_meta_box( $custom_meta_fields ) {
 							echo '<input type="checkbox" value="' . $option['value'] . '" name="' . $field['id'] . '[]" id="' . $option['value'] . '"', $meta && in_array( $option['value'], $meta ) ? ' checked="checked"' : '',' />
 									<label for="' . $option['value'] . '">' . $option['label'] . '</label><br />';
 						}
-						echo '<span class="description">' . $field['desc'] . '</span>';
+						echo '<div class="metabox-form__description">' . $field['desc'] . '</div>';
 						break;
 
 					// image
@@ -131,14 +150,23 @@ function show_custom_meta_box( $custom_meta_fields ) {
 										<a href="#" class="custom_clear_image_button">Remove Image</a>
 									</small>
 									<br clear="all" />
-									<span class="description">' . $field['desc'] . '</span>';
+									<div class="metabox-form__description">' . $field['desc'] . '</div>';
+						break;
+
+					// text
+					case 'color':
+						wp_enqueue_script('wp-color-picker');
+					  wp_enqueue_style( 'wp-color-picker' );
+
+						echo '<input class="colorpicker" type="text" name="' . $field['id'] . '" id="' . $field['id'] . '" value="' . $meta . '" style="width: 100%;" data-default-color="' . $field['default'] . '" />
+									<div class="metabox-form__description">' . $field['desc'] . '</div>';
 						break;
 
 
 				}
-		echo '</td></tr>';
+		echo '</div></div>';
 	}
-	echo '</table>';
+	echo '</div>';
 }
 
 // Save the Data

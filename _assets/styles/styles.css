@@ -1516,6 +1516,7 @@ body {
   /*border: 1px solid @grey;*/
 
   padding: 120px 120px 0;
+  overflow: hidden;
 }
 .post .post__header {
   *zoom: 1;
@@ -1548,55 +1549,6 @@ body {
 }
 .post .post__header .post__title a:hover {
   color: #ed1c24;
-}
-.post .post__header .post__title.post__title--white {
-  color: #fff;
-}
-.post .post__header .post__title.post__title--white a {
-  color: #fff;
-}
-.post .post__header .post__title.post__title--white a:hover {
-  color: #ed1c24;
-}
-.post .post__header .post__quote {
-  font-size: 20px;
-  line-height: 35px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-family: 'PT Sans Caption', sans-serif;
-  margin: -8px 0 0 0;
-  margin: -10px 0 29px 0;
-}
-.post .post__header .post__quote .large-text {
-  margin: 0;
-  padding: 0;
-}
-.post .post__header .post__quote.post__quote--white {
-  color: #fff;
-}
-.post .post__header .post__quote-author {
-  width: 55%;
-  float: left;
-  margin-top: -11px;
-}
-.post .post__header .post__quote-author.post__quote-author--white a {
-  color: #fff;
-}
-.post .post__header .post__quote-author.post__quote-author--white a:hover {
-  color: #ed1c24;
-}
-.post .post__header .post__quote-meta {
-  *zoom: 1;
-  margin-bottom: -9px;
-}
-.post .post__header .post__quote-meta:before,
-.post .post__header .post__quote-meta:after {
-  content: " ";
-  display: table;
-}
-.post .post__header .post__quote-meta:after {
-  clear: both;
 }
 .post .post__header .post__meta {
   float: left;
@@ -1634,9 +1586,6 @@ body {
   letter-spacing: 2px;
   font-size: 13px;
   font-weight: bold;
-}
-.post .post__header .post__lead.post__lead--white {
-  color: #fff;
 }
 .post .post__header.post__header--cover {
   -webkit-background-size: cover;
@@ -1876,6 +1825,9 @@ body {
 .pagination .page-numbers.next,
 .pagination .page-numbers.prev {
   display: none;
+}
+.pagination .page-numbers.dots {
+  color: #7b7b7b;
 }
 .pagination a.page-numbers {
   color: #7b7b7b;

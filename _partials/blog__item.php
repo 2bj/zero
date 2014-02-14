@@ -1,33 +1,94 @@
 <div class="blog__item">
-	<div class="post">
 
+	<style>
+
+	<?php if ( $metaboxes['of_color_text'][0] || $metaboxes['of_color_bg'][0] ) : ?>
+	#post-<?php echo $id ?> {
 		<?php
-		$of_color = unserialize( $metaboxes['of_color'][0] );
-		if ( ! is_array( $of_color ) ) {
-			$of_color = array();
-		}
+		echo ( $metaboxes['of_color_text'][0] ? 'color: ' . $metaboxes['of_color_text'][0] . '; ' : '' );
+		echo ( $metaboxes['of_color_bg'][0] ? 'background-color: ' . $metaboxes['of_color_bg'][0] . '; ' : '' );
 		?>
+	}
+	<?php endif; ?>
+
+	<?php if ( $metaboxes['of_color_link'][0] ) : ?>
+	#post-<?php echo $id ?> a {
+		<?php
+		echo ( $metaboxes['of_color_link'][0] ? 'color: ' . $metaboxes['of_color_link'][0] . '; ' : '' );
+		?>
+	}
+	<?php endif; ?>
+
+	<?php if ( $metaboxes['of_color_link_hover'][0] ) : ?>
+	#post-<?php echo $id ?> a:hover {
+		<?php
+		echo ( $metaboxes['of_color_link_hover'][0] ? 'color: ' . $metaboxes['of_color_link_hover'][0] . '; ' : '' );
+		?>
+	}
+	<?php endif; ?>
+
+	<?php if ( $metaboxes['of_color_text'][0] || $metaboxes['of_color_header'][0] ) : ?>
+	#post-<?php echo $id ?> .post__title {
+		<?php
+		echo ( $metaboxes['of_color_text'][0] ? 'color: ' . $metaboxes['of_color_text'][0] . ' !important; ' : '' );
+		echo ( $metaboxes['of_color_header'][0] ? 'color: ' . $metaboxes['of_color_header'][0] . ' !important; ' : '' );
+		?>
+	}
+	<?php endif; ?>
+
+	<?php if ( $metaboxes['of_color_text'][0] || $metaboxes['of_color_header'][0] ) : ?>
+	#post-<?php echo $id ?> .post__title a {
+		<?php
+		echo ( $metaboxes['of_color_text'][0] ? 'color: ' . $metaboxes['of_color_text'][0] . ' !important; ' : '' );
+		echo ( $metaboxes['of_color_header'][0] ? 'color: ' . $metaboxes['of_color_header'][0] . ' !important; ' : '' );
+		?>
+	}
+	<?php endif; ?>
+
+	<?php if ( $metaboxes['of_color_header_hover'][0] ) : ?>
+	#post-<?php echo $id ?> .post__title a:hover {
+		<?php
+		echo ( $metaboxes['of_color_header_hover'][0] ? 'color: ' . $metaboxes['of_color_header_hover'][0] . ' !important; ' : '' );
+		?>
+	}
+	<?php endif; ?>
+
+	<?php if ( $metaboxes['of_color_lead'][0] ) : ?>
+	#post-<?php echo $id ?> .post__lead {
+		<?php
+		echo ( $metaboxes['of_color_lead'][0] ? 'color: ' . $metaboxes['of_color_lead'][0] . '; ' : '' );
+		?>
+	}
+	<?php endif; ?>
+	</style>
+
+	<div class="post" id="post-<?php echo $id ?>">
 
 		<div class="post__header <?php echo ( $cover_type == 'cover' ? ' post__header--cover ' : '' ); ?>" <?php echo ( $cover_type == 'cover' ? ' style="background-image: url(' . $cover . ')" ' : '' ); ?>>
 
-			<h1 class="post__title <?php echo ( in_array( 'title_white', $of_color ) ? ' post__title--white ' : '' ) ?>">
+			<h1 class="post__title">
+
 				<?php if ( ! is_single() ) : ?>
 				<a href="<?php the_permalink(); ?>" title="<?php echo strip_tags( $title ) ?>">
 					<?php echo ( $hidden_title ? '<br />' : $title )  ?>
 				</a>
+
 				<?php else: ?>
-				<?php echo ( $hidden_title ? '<br />' : $title )  ?>
+				<span>
+					<?php echo ( $hidden_title ? '<br />' : $title )  ?>
+				</span>
 				<?php endif; ?>
+
 			</h1>
 
 			<div class="post__meta">
-				<div class="post__share post__share--<?php echo $metaboxes['of_shares'][0] ?>">
+				<div class="post__share">
 					<?php require( 'share.php' ); ?>
 				</div>
 			</div>
 
 			<?php if ( $lead ) : ?>
-			<div class="post__lead <?php echo ( in_array( 'lead_white', $of_color ) ? ' post__lead--white ' : '' ) ?>">
+			<div class="post__lead" >
 				<?php echo $lead ?>
 			</div>
 			<?php endif; ?>

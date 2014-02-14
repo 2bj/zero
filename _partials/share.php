@@ -60,13 +60,13 @@ if ( is_numeric( $twitter->count ) ) {
 
 	</div>
 	<div class="share__caller">
-		<div class="share__counter">
+		<div class="share__counter" style="color: <?php echo ( $metaboxes['of_color_likes'][0] ? $metaboxes['of_color_likes'][0] : '#aeaeae' ) ?>; ">
 			<?php echo ( $counter ? $counter : '' ) ?>
 		</div>
 		<div class="share__icon">
 			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 width="18px" height="18px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve">
-			<path fill-rule="evenodd" clip-rule="evenodd" fill="#e1e1e1" d="M12.526,11.856c-1.079,1.111-3.205,2.872-3.474,3.148
+			<path fill-rule="evenodd" clip-rule="evenodd" fill="<?php echo ( $metaboxes['of_color_likes'][0] ? $metaboxes['of_color_likes'][0] : '#e1e1e1' ) ?>" d="M12.526,11.856c-1.079,1.111-3.205,2.872-3.474,3.148
 				c-0.274-0.277-2.441-2.037-3.541-3.148c-1.293-1.307-2.513-2.653-2.513-4.501c0-1.849,1.483-3.347,3.313-3.347
 				c1.14,0,2.146,0.582,2.741,1.468c0.585-0.886,1.571-1.468,2.69-1.468c1.795,0,3.25,1.499,3.25,3.347
 				C14.992,9.204,13.796,10.549,12.526,11.856z"/>

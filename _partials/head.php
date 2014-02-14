@@ -22,6 +22,8 @@
 		<meta name="twitter:creator" value="<?php echo get_theme_mod( 'zero_og_twitter' ); ?>">
 		<meta name="twitter:domain" value="<?php echo $_SERVER['SERVER_NAME']; ?>">
 
+		<link title="" type="application/rss+xml" rel="alternate" href="http://<?php echo $_SERVER['SERVER_NAME']; ?>/feed/" />
+
 		<link href='http://fonts.googleapis.com/css?family=PT+Mono|PT+Sans+Caption:700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 		<?php wp_head() ?>
 

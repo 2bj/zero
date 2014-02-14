@@ -8,6 +8,7 @@ if ( strpos( $_SERVER['REQUEST_URI'], "fb_action_ids") ) {
 while ( have_posts() ) {
 	the_post();
 
+	$id = get_the_ID();
 	$title = get_the_title();
 	$metaboxes = $post_meta_data = get_post_custom($post->ID);
 

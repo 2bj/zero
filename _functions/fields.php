@@ -25,65 +25,124 @@ $cover_fields = array(
 		)
 	),
 
-	array(
+	array (
 		'label'=> 'Лид',
 		'id'	=> $prefix .'lead',
 		'type'	=> 'textarea'
 	),
 
-
 	array (
-		'label'	=> 'Цвета',
-		'id'	=> $prefix .'color',
-		'type'	=> 'checkbox_group',
-		'options' => array (
-			'title_white' => array (
-				'label' => 'Белый заголовок',
-				'value'	=> 'title_white'
-			),
-			'lead_white' => array (
-				'label' => 'Белый лид',
-				'value'	=> 'lead_white'
-			)
-		)
-	),
-
-	array (
-		'label'	=> 'Заголовок',
+		'label'	=> '',
 		'id'	=> $prefix .'header',
 		'type'	=> 'checkbox_group',
 		'options' => array (
 			'title_no' => array (
-				'label' => 'Скрыть',
+				'label' => 'Скрыть заголовок',
 				'value'	=> 'title_no'
 			)
 		)
 	),
 
-	array (
-		'label' => 'Лайки',
-		'id'	=> $prefix .'shares',
-		'type'	=> 'radio',
-		'default' => 'grey',
-		'options' => array (
-			'grey' => array (
-				'label' => 'Серые',
-				'value'	=> 'grey'
-			),
-			'white' => array (
-				'label' => 'Белые',
-				'value'	=> 'white'
-			),
-			'black' => array (
-				'label' => 'Черные',
-				'value'	=> 'black'
-			),
-			'color' => array (
-				'label' => 'Цветные',
-				'value'	=> 'color'
-			),
-		)
+);
+
+$color_fields = array(
+
+	array(
+		'label'=> 'Фон',
+		'id'	=> $prefix .'color_bg',
+		'type'	=> 'color',
+		'default' => '#ffffff'
 	),
+
+	array(
+		'label'=> 'Текст',
+		'id'	=> $prefix .'color_text',
+		'type'	=> 'color',
+		'default' => '#000000'
+	),
+
+	array(
+		'label'=> 'Ссылки',
+		'id'	=> $prefix .'color_link',
+		'type'	=> 'color',
+		'default' => get_theme_mod( 'zero_theme_color' )
+	),
+
+	array(
+		'label'=> 'Ссылки (ховер)',
+		'id'	=> $prefix .'color_link_hover',
+		'type'	=> 'color',
+		'default' => '#000000'
+	),
+
+	array(
+		'label'=> 'Заголовок',
+		'id'	=> $prefix .'color_header',
+		'type'	=> 'color',
+		'default' => '#000000'
+	),
+
+	array(
+		'label'=> 'Заголовок (ховер)',
+		'id'	=> $prefix .'color_header_hover',
+		'type'	=> 'color',
+		'default' => get_theme_mod( 'zero_theme_color' )
+	),
+
+	array(
+		'label'=> 'Лайки',
+		'id'	=> $prefix .'color_likes',
+		'type'	=> 'color',
+		'default' => '#E1E1E1'
+	),
+
+	array(
+		'label'=> 'Лид',
+		'id'	=> $prefix .'color_lead',
+		'type'	=> 'color',
+		'default' => '#000000'
+	),
+
+	// array (
+	// 	'label'	=> 'Цвета',
+	// 	'id'	=> $prefix .'color',
+	// 	'type'	=> 'checkbox_group',
+	// 	'options' => array (
+	// 		'title_white' => array (
+	// 			'label' => 'Белый заголовок',
+	// 			'value'	=> 'title_white'
+	// 		),
+	// 		'lead_white' => array (
+	// 			'label' => 'Белый лид',
+	// 			'value'	=> 'lead_white'
+	// 		)
+	// 	)
+	// ),
+
+	// array (
+	// 	'label' => 'Лайки',
+	// 	'id'	=> $prefix .'shares',
+	// 	'type'	=> 'radio',
+	// 	'default' => 'grey',
+	// 	'options' => array (
+	// 		'grey' => array (
+	// 			'label' => 'Серые',
+	// 			'value'	=> 'grey'
+	// 		),
+	// 		'white' => array (
+	// 			'label' => 'Белые',
+	// 			'value'	=> 'white'
+	// 		),
+	// 		'black' => array (
+	// 			'label' => 'Черные',
+	// 			'value'	=> 'black'
+	// 		),
+	// 		'color' => array (
+	// 			'label' => 'Цветные',
+	// 			'value'	=> 'color'
+	// 		),
+	// 	)
+	// ),
 );
 
 $bg_fields = array(

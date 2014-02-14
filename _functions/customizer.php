@@ -510,6 +510,16 @@ function zero_admin_styles() {
 		.misc-pub-visibility {
 			display: none !important;
 		}
+		.metabox-form {
+
+		}
+		.metabox-form__item {
+			margin-bottom: 15px;
+		}
+		.metabox-form__label {
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
 	</style>
 	<?php
 }
