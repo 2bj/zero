@@ -7,11 +7,7 @@ function zero_html_attributes() {
 }
 add_action('html_attributes', 'zero_html_attributes');
 
-function zero_og_extras() {
-	echo "\n";
-	echo "\t\t<meta property=\"og:type\" content=\"article\">";
-}
-add_action('og_extras', 'zero_og_extras');
+add_action('og_extras', 'zero_og_article_extras');
 
 
 $meta = merge_meta( array(

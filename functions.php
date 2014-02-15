@@ -9,3 +9,4 @@ require_once '_functions/customizer.php';
 require_once '_functions/editor.php';
 require_once '_functions/metaboxes.php';
 require_once '_functions/render.php';
+require_once '_functions/opengraph.php';
