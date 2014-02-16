@@ -3,7 +3,7 @@
 <?php
 
 function zero_html_attributes() {
-	echo ' prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#"';
+	echo ' prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"';
 }
 add_action('html_attributes', 'zero_html_attributes');
 

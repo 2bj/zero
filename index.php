@@ -1,7 +1,7 @@
 <?php
 
 function zero_html_attributes() {
-	echo ' prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#"';
+	echo ' prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"';
 }
 add_action('html_attributes', 'zero_html_attributes');
 
