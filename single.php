@@ -1,5 +1,13 @@
 <?php
 
+function zero_html_attributes() {
+	echo ' prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"';
+}
+add_action('html_attributes', 'zero_html_attributes');
+
+add_action('og_extras', 'zero_og_article_extras');
+
+
 if ( strpos( $_SERVER['REQUEST_URI'], "fb_action_ids") ) {
 	$uri = explode( "?", $_SERVER['REQUEST_URI'] );
 	header( "location: " . $uri[0] );
