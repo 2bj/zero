@@ -1,4 +1,4 @@
-@import '_assets/styles/styles.css';
+@import 'assets/styles/styles.css';
 
 body {
 	width: 960px;
@@ -14,10 +14,12 @@ p, h1, h2, h3, h4, h5, h6, li, blockquote {
 	background-color: rgba(255, 255, 255, .9);
 }
 
+.mce-object,
+.mce-object-iframe,
 .mceItemMedia.mceItemIframe {
 	width: 960px;
 	max-width: 960px;
-	height: 640px !important;
+	height: 400px !important;
 	margin-bottom: 53px;
 }
 
@@ -68,4 +70,28 @@ td {
 .mceItemTable caption,
 .mceItemVisualAid {
 	border: 1px dotted #ccc !important;
+}
+
+p img.aligncenter {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.wp-more-tag.mce-wp-more {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  position: static;
+  margin: 0;
+  padding: 0;
+  height: 30px !important;
+  width: 100% !important;
+}
+
+pre,
+.code {
+  background-color: rgba(0, 0, 0, .05);
 }

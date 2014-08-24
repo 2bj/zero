@@ -1,17 +1,14 @@
-<?php
+<?php require( 'partials/head.php' ) ?>
+    <?php
+    require( 'partials/header.php' );
 
-if ( $_SERVER['REQUEST_URI'] == '/blog/' ) {
-	wp_redirect( '/' );
-}
+    $message = '404';
+    require( 'partials/empty.php' );
 
-require( '_partials/head.php' );
-require( '_partials/header.php' );
-?>
-
-	<section class="page">
-		<h1 class="page__title">
-			Страница не найдена
-		</h1>
-	</section>
-
-<?php require( '_partials/foot.php' ); ?>
+    wp_footer();
+    if ( get_theme_mod( 'zero_footer_code' ) ) {
+      echo get_theme_mod( 'zero_footer_code' );
+    }
+    ?>
+  </body>
+</html>
