@@ -2442,20 +2442,19 @@ body.body.body--white {
 
 .share {
   position: relative;
-  width: 400px;
+  width: 460px;
   text-align: right;
 }
 .share .share__wrapper {
   position: absolute;
-  top: -3px;
-  right: 0;
+  top: 115px;
+  left: 0;
+  right: 120px;
   z-index: 2;
   text-align: right;
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
           transition: opacity 0.2s ease;
-  padding-top: 57px;
-  padding-right: 60px;
   line-height: 20px !important;
   height: 20px;
 }
@@ -2466,7 +2465,7 @@ body.body.body--white {
   margin-right: 10px;
 }
 .share .share__wrapper .share__item:last-child {
-  margin-right: -10px;
+  margin-right: 5px;
 }
 .share .share__wrapper .share__item.share__item--fb {
   width: 76px;
@@ -2480,9 +2479,9 @@ body.body.body--white {
 .share .share__caller {
   position: relative;
   z-index: 1;
-  padding-top: 57px;
-  padding-right: 60px;
-  height: 120px;
+  padding-top: 118px;
+  padding-right: 115px;
+  height: 146px;
   -webkit-transition: opacity 0.2s ease;
           transition: opacity 0.2s ease;
 }
