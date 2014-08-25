@@ -18,7 +18,7 @@ msgstr ""
 
 #: customizer.php:33
 msgid "Layout"
-msgstr "Лейаут\t"
+msgstr "Лейаут"
 
 #: customizer.php:52
 msgid "Layout alignment"
@@ -38,7 +38,7 @@ msgstr "Лайки, комменты и т. д."
 
 #: customizer.php:75
 msgid "Comma separated list of tags with matrix layout on its archive page"
-msgstr "Лайки, комменты и т. д."
+msgstr "Список тегов через запятую, архивные страницы которых отображать мозайкой"
 
 #: customizer.php:85
 msgid "Twitter username"
@@ -70,51 +70,51 @@ msgstr "Коды счетчиков"
 
 #: dates.php:22
 msgid "January"
-msgstr "Январь"
+msgstr "Января"
 
 #: dates.php:22
 msgid "February"
-msgstr "Февраль"
+msgstr "Февраля"
 
 #: dates.php:22
 msgid "March"
-msgstr "Март"
+msgstr "Марта"
 
 #: dates.php:22
 msgid "April"
-msgstr "Апрель"
+msgstr "Апреля"
 
 #: dates.php:22
 msgid "May"
-msgstr "Май"
+msgstr "Мая"
 
 #: dates.php:22
 msgid "June"
-msgstr "Июнь"
+msgstr "Июня"
 
 #: dates.php:22
 msgid "July"
-msgstr "Июль"
+msgstr "Июля"
 
 #: dates.php:22
 msgid "August"
-msgstr "Август"
+msgstr "Августа"
 
 #: dates.php:22
 msgid "September"
-msgstr "Сентябрь"
+msgstr "Сентября"
 
 #: dates.php:22
 msgid "October"
-msgstr "Октябрь"
+msgstr "Октября"
 
 #: dates.php:22
 msgid "November"
-msgstr "Ноябрь"
+msgstr "Ноября"
 
 #: dates.php:22
 msgid "December"
-msgstr "Декабрь"
+msgstr "Декабря"
 
 #: dates.php:55
 msgid "Today"
@@ -169,8 +169,12 @@ msgid "Slider"
 msgstr "Слайдер"
 
 #: fields.php:8
-msgid "HTML is OK. BTW, if you type an external link it will become the teaser link instead of the regulat post permalink"
+msgid ""
+"HTML is OK. BTW, if you type an external link it will become the teaser link "
+"instead of the regulat post permalink"
 msgstr ""
+"HTML — ок. Если указать ссылку, то именно она будет использована в тизере "
+"вместо ссылки на пост"
 
 #: fields.php:19
 msgid "Hide the post title"

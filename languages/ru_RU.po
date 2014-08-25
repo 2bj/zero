@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-08-24 20:11+0300\n"
+"PO-Revision-Date: 2014-08-25 13:58+0400\n"
 "Last-Translator: Aleksey Cherenkevich <cherenkevich.com@gmail.com>\n"
 "Language-Team: Aleksey Cherenkevich <cherenkevich.com@gmail.com>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: customizer.php:33
 msgid "Layout"
-msgstr "Лейаут\t"
+msgstr "Лейаут"
 
 #: customizer.php:52
 msgid "Layout alignment"
@@ -38,7 +38,8 @@ msgstr "Лайки, комменты и т. д."
 
 #: customizer.php:75
 msgid "Comma separated list of tags with matrix layout on its archive page"
-msgstr "Лайки, комменты и т. д."
+msgstr ""
+"Список тегов через запятую, архивные страницы которых отображать мозайкой"
 
 #: customizer.php:85
 msgid "Twitter username"
@@ -70,51 +71,51 @@ msgstr "Коды счетчиков"
 
 #: dates.php:22
 msgid "January"
-msgstr "Январь"
+msgstr "Января"
 
 #: dates.php:22
 msgid "February"
-msgstr "Февраль"
+msgstr "Февраля"
 
 #: dates.php:22
 msgid "March"
-msgstr "Март"
+msgstr "Марта"
 
 #: dates.php:22
 msgid "April"
-msgstr "Апрель"
+msgstr "Апреля"
 
 #: dates.php:22
 msgid "May"
-msgstr "Май"
+msgstr "Мая"
 
 #: dates.php:22
 msgid "June"
-msgstr "Июнь"
+msgstr "Июня"
 
 #: dates.php:22
 msgid "July"
-msgstr "Июль"
+msgstr "Июля"
 
 #: dates.php:22
 msgid "August"
-msgstr "Август"
+msgstr "Августа"
 
 #: dates.php:22
 msgid "September"
-msgstr "Сентябрь"
+msgstr "Сентября"
 
 #: dates.php:22
 msgid "October"
-msgstr "Октябрь"
+msgstr "Октября"
 
 #: dates.php:22
 msgid "November"
-msgstr "Ноябрь"
+msgstr "Ноября"
 
 #: dates.php:22
 msgid "December"
-msgstr "Декабрь"
+msgstr "Декабря"
 
 #: dates.php:55
 msgid "Today"
