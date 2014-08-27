@@ -40,9 +40,28 @@ function sliderImagesToAnchors( $html ) {
   // return $output;
 }
 
+function photosetGrid( $html ) {
+  $img_number = 0;
+  $output = '';
+
+  preg_match_all('/<img(.*?)>/si', $html[1], $matches);
+
+  $output .= '<div class="grid"><div class="grid__row" data-layout="' . count( $matches[0] ) . '">';
+  $output .= $html[1];
+  $output .= '</div></div>';
+
+  return $output;
+}
+
 add_filter( 'the_content', 'zero_content' );
 function zero_content( $html ) {
   $output = $html;
+
+  // Рендерим Фотораму по красоте )
   $output = preg_replace_callback( '!<(?:div|p) class="slider">(.*?)</(?:div|p)>!si', sliderImagesToAnchors, $html );
+
+  // Готовим лейаут для гридов
+  $output = preg_replace_callback( '!<(?:div|p) class="grid">(.*?)</(?:div|p)>!si', photosetGrid, $html );
+
   return $output;
 }

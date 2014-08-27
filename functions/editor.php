@@ -115,6 +115,11 @@ function zero_mce_before_init( $settings ) {
       'title' => __( 'Slider', 'zero' ),
       'block' => 'div',
       'classes' => 'slider'
+    ),
+    array(
+      'title' => __( 'Photoset grid', 'zero' ),
+      'block' => 'div',
+      'classes' => 'grid'
     )
   );
 
