@@ -43,7 +43,7 @@
       .pipe( sass( {
         sourcemap: false,
         quiet: true,
-        style: 'compressed'
+        style: 'expanded'
       } ) )
       .pipe( base64( {
         extensions: [ 'svg', 'png' ],
