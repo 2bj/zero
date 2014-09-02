@@ -133,11 +133,18 @@ function zero_mce_before_init( $settings ) {
 //  array_push( $plugins, 'table' );
 //  return $plugins;
 // }
+//
+function my_mce_external_plugins($plugins) {
+    $plugins['anchor'] = '/wp-content/themes/zero/assets/scripts/tinymce/js/tinymce/plugins/anchor/plugin.min.js';
+    $plugins['table'] = '/wp-content/themes/zero/assets/scripts/tinymce/js/tinymce/plugins/table/plugin.min.js';
+    return $plugins;
+}
+add_filter('mce_external_plugins', 'my_mce_external_plugins');
 
 add_filter("mce_buttons", "extended_editor_mce_buttons", 0);
 function extended_editor_mce_buttons( $buttons ) {
   return array(
-    'styleselect', 'bold', 'bullist', 'numlist', 'justifyleft', 'justifycenter', 'justifyright', 'link', 'unlink', 'anchor', 'sup', 'sub', 'charmap'
+    'styleselect', 'bold', 'strikethrough', 'bullist', 'numlist', 'alignleft', 'aligncenter', 'alignright', 'link', 'unlink', 'anchor', 'superscript', 'subscript', 'charmap', 'wp_more', 'table'
   );
 }
 

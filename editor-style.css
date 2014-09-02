@@ -116,3 +116,11 @@ pre,
 .code {
   background-color: rgba(0, 0, 0, .05);
 }
+
+.mce-item-anchor {
+  width: 20px !important;
+  height: 20px !important;
+  vertical-align: baseline;
+  margin-bottom: -4px;
+  margin-right: 7px;
+}
