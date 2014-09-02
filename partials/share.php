@@ -1,6 +1,5 @@
 <?php
 
-$counter = 0;
 $post_item = array(
   'id' => get_the_ID(),
   'link' => get_the_permalink(),
@@ -18,25 +17,6 @@ if ( strstr( $post_image[0], 'images/media/default' ) ) {
 if ( $post_image ) {
   $post_item['image'] = $post_image;
 }
-
-// if ( trim( get_theme_mod( 'zero_og_fb_appId' ) ) ) {
-//   $fb = json_decode( file_get_contents( 'http://graph.facebook.com/' . $post_item['link'] ) );
-//   if ( is_numeric( $fb->shares ) ) {
-//     $counter += $fb->shares;
-//   }
-// }
-
-// if ( trim( get_theme_mod( 'zero_og_vk' ) ) ) {
-//   $vk = json_decode( file_get_contents( 'https://api.vk.com/method/likes.getList?type=sitepage&owner_id=' . get_theme_mod( 'zero_og_vk' ) . '&page_url=' . $post_item['link'] ) );
-//   if ( is_numeric( $vk->response->count ) ) {
-//     $counter += $vk->response->count;
-//   }
-// }
-
-// $twitter = json_decode( file_get_contents( 'http://urls.api.twitter.com/1/urls/count.json?url=' . $post_item['link'] ) );
-// if ( is_numeric( $twitter->count ) ) {
-//   $counter += $twitter->count;
-// }
 
 ?>
 
@@ -73,7 +53,7 @@ if ( $post_image ) {
     <?php endif; ?>
 
     <div class="share__item share__item--tw">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $post_item['link'] ?>" data-text="<?php echo $post_item['title'] ?>">Tweet</a>
+      <a lang="en" href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $post_item['link'] ?>" data-text="<?php echo $post_item['title'] ?>">Tweet</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
   </div>
