@@ -74,7 +74,7 @@
       }
     } ).find( '.search__field' ).autoGrowInput( {
       comfortZone: 40,
-      minWidth: 60,
+      minWidth: 10,
       maxWidth: 960
     } );
 
