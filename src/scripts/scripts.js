@@ -8,7 +8,8 @@
   if ( $( '.mosaic__wrapper' ).length ) {
     $( '.mosaic__wrapper' ).masonry( {
       itemSelector: '.mosaic__item',
-      columnWidth: 330
+      columnWidth: 330,
+      isFitWidth: true
     } );
   }
 

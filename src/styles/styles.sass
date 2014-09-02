@@ -287,7 +287,6 @@ body.body
       padding-top: 0
       margin-top: -8px
       margin-bottom: 99px
-      padding-left: 60px
 
       @media screen and (max-width: 960px)
         padding-left: 12.5%
@@ -309,6 +308,11 @@ body.body
 
       @media screen and (max-width: 600px)
         padding-top: 51px
+
+  .body--white &.post--page .post__title
+    padding-left: 60px
+  .body--center &.post--page .post__title
+    padding-left: 0
 
 .footer
   +clear
@@ -349,6 +353,27 @@ body.body
       text-align: left
       display: inline-block
 
+  .post--page + &
+    margin-top: -20px
+    margin-bottom: 52px
+    margin-left: 0
+    padding-left: 120px
+
+    @media screen and (max-width: 960px)
+      padding-left: 12.5%
+      margin-top: 100px
+
+    .footer__pagination
+      display: none
+    .footer__credits
+      float: none
+      width: 100%
+      text-align: left
+
+  .body--center &
+    margin-left: auto
+    margin-right: auto
+
   .mosaic + &
     width: auto
     margin-bottom: 52px
@@ -364,23 +389,6 @@ body.body
     .footer__pagination
       display: none
 
-    .footer__credits
-      float: none
-      width: 100%
-      text-align: left
-
-  .post--page + &
-    margin-top: -20px
-    margin-bottom: 52px
-    margin-left: 0
-    padding-left: 120px
-
-    @media screen and (max-width: 960px)
-      padding-left: 12.5%
-      margin-top: 100px
-
-    .footer__pagination
-      display: none
     .footer__credits
       float: none
       width: 100%
@@ -571,6 +579,11 @@ body.body
       margin: 0
       width: 100%
 
+  .body--center &
+    .mosaic__wrapper
+      margin-left: auto
+      margin-right: auto
+
 .teaser
   display: block
   position: relative
@@ -680,6 +693,7 @@ body.body
   .next,
   .prev
     display: none
+
 
 .header__nav ul
   margin: 0
