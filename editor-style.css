@@ -129,3 +129,12 @@ pre,
   margin-bottom: -4px;
   margin-right: 7px;
 }
+
+.mce-item-table,
+.mce-item-table td,
+.mce-item-table th,
+.mce-item-table caption {
+  border-style: dotted;
+  border-color: rgba(0, 0, 0, .1);
+  background-color: #fafafa;
+}
