@@ -365,8 +365,7 @@ function zero_admin_styles() {
 		#screen-meta-links,
 		.autosave-info,
 		input#shortlink + a.button,
-		.jaxtag .howto,
-		.misc-pub-visibility {
+		.jaxtag .howto {
 			display: none !important;
 		}
 		.metabox-form {
