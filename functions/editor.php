@@ -135,8 +135,8 @@ function zero_mce_before_init( $settings ) {
 // }
 //
 function my_mce_external_plugins($plugins) {
-    $plugins['anchor'] = '/wp-content/themes/zero/assets/scripts/tinymce/js/tinymce/plugins/anchor/plugin.min.js';
-    $plugins['table'] = '/wp-content/themes/zero/assets/scripts/tinymce/js/tinymce/plugins/table/plugin.min.js';
+    $plugins['anchor'] = FRONT . '/assets/scripts/tinymce/js/tinymce/plugins/anchor/plugin.min.js';
+    $plugins['table'] = FRONT . '/assets/scripts/tinymce/js/tinymce/plugins/table/plugin.min.js';
     return $plugins;
 }
 add_filter('mce_external_plugins', 'my_mce_external_plugins');
