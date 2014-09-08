@@ -31,10 +31,6 @@
     scripts: 'assets/scripts'
   }
 
-  gulp.task( 'images', function() {
-    return gulp.src( src.images ).pipe( gulp.dest( dist.images ) );
-  } );
-
   // styles
   gulp.task( 'styles', function() {
     return gulp
@@ -46,9 +42,9 @@
         style: 'expanded'
       } ) )
       .pipe( base64( {
-        extensions: [ 'svg', 'png' ],
-        maxImageSize: 8*1024,
-        debug: false
+        extensions: [ 'svg', 'png', 'woff' ],
+        maxImageSize: 1024 * 1024,
+        debug: true
       } ) )
       .pipe( autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 7', 'opera 12.1', 'ios 6', 'android 4' ) )
       .pipe( minifycss() )
@@ -71,7 +67,7 @@
     gulp.watch( src.styles, [ 'styles' ] );
   } );
 
-  gulp.task( 'build', [ 'styles', 'scripts', 'images' ] );
+  gulp.task( 'build', [ 'styles', 'scripts' ] );
   gulp.task( 'default', [ 'watch' ] );
 
 } )();
