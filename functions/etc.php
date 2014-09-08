@@ -62,8 +62,8 @@ function zero_scripts_and_styles() {
     wp_deregister_script( 'jquery' );
   }
 
-  wp_register_script( 'scripts', FRONT . '/assets/scripts/scripts.js', array(), 0.84, true );
-  wp_register_style( 'styles', FRONT . '/assets/styles/styles.css', null, 0.84, 'screen' );
+  wp_register_script( 'scripts', FRONT . '/assets/scripts/scripts.js', array(), 0.91, true );
+  wp_register_style( 'styles', FRONT . '/assets/styles/styles.css', null, 0.91, 'screen' );
 
   wp_enqueue_script( 'scripts' );
   wp_enqueue_style( 'styles' );
