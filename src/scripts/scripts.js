@@ -2,7 +2,7 @@
 
 
   $( '.grid__row' ).photosetGrid({
-    gutter: '10px',
+    gutter: '10px'
   });
 
   if ( $( '.mosaic__wrapper' ).length ) {

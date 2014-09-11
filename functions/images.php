@@ -39,6 +39,7 @@ function zero_jpeg_quality() {
  */
 if ( function_exists( 'add_image_size' ) ) {
   add_image_size( '960x', '1920', '99999', false );
+  add_image_size( '640x', '1280', '99999', false );
   add_image_size( '240x', '480', '99999', false );
 }
 
@@ -49,6 +50,7 @@ add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );
 function custom_image_sizes_choose( $sizes ) {
   $custom_sizes = array(
     '960x' => __( '960 by width', 'zero' ),
+    '640x' => __( '640 by width', 'zero' ),
     '240x' => __( '240 by width', 'zero' )
   );
   return array_merge( $sizes, $custom_sizes );

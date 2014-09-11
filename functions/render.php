@@ -18,26 +18,10 @@ function sliderImageToAnchor( $html ) {
   }
 
   return '<a href="' . $img['path'] . $img['type'] . '" data-caption="' . $img['alt'] . '"><img src="' . $img['path'] . '-150x150' . $img['type'] . '" /></a>';
-
-  // print_r( $img );
 }
 
 function sliderImagesToAnchors( $html ) {
-
   return preg_replace_callback( '/<img(.*?)>/si', sliderImageToAnchor, $html[0] );
-
-
-  // $pattern2 = '/<img(?:.*?)alt="(.*?)"(?:.*?)src="(.*?)(.jpg|.jpeg|.png)"(?:.*?)>/si';
-
-  // if ( preg_match( $pattern1, $html[0] ) ) {
-  //   echo 'Yes';
-  //   // $output = preg_replace( $pattern1, '<a href="\\1\\2" data-caption="\\3"><img src="\\1-150x150\\2" /></a>', $html[0]);
-  // } else {
-  //   echo 'No';
-  //   // $output = preg_replace( $pattern2, '<a href="\\2\\3" data-caption="\\1"><img src="\\2-150x150\\3" /></a>', $html[0]);
-  // }
-  // $output = preg_replace( $pattern2, '<a href="\\2\\3" data-caption="\\1"><img src="\\2-150x150\\3" /></a>', $html[0]);
-  // return $output;
 }
 
 function photosetGrid( $html ) {
