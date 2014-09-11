@@ -115,3 +115,13 @@ function zero_enhancements() {
   // Убираем умные кавычки, потому что от их автоматической расстановки только проблемы
   remove_filter('the_content', 'wptexturize');
 }
+
+
+function perfstats() {
+  echo "<script>console.info('" . get_num_queries() . " / "; timer_stop(1);
+  echo "s / ". round( memory_get_usage() / 1024 / 1024, 2 ) . " MB');</script>";
+}
+
+if( WP_DEBUG ) {
+  add_action('wp_footer', 'perfstats');
+}
