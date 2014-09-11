@@ -53,15 +53,18 @@ function photosetGrid( $html ) {
   return $output;
 }
 
-add_filter( 'the_content', 'zero_content' );
-function zero_content( $html ) {
+// Рендерим Фотораму по красоте
+add_filter( 'the_content', 'zero_slider' );
+function zero_slider( $html ) {
   $output = $html;
-
-  // Рендерим Фотораму по красоте )
   $output = preg_replace_callback( '!<(?:div|p) class="slider">(.*?)</(?:div|p)>!si', sliderImagesToAnchors, $html );
+  return $output;
+}
 
-  // Готовим лейаут для гридов
+// Готовим лейаут для гридов
+add_filter( 'the_content', 'zero_grid' );
+function zero_grid( $html ) {
+  $output = $html;
   $output = preg_replace_callback( '!<(?:div|p) class="grid">(.*?)</(?:div|p)>!si', photosetGrid, $html );
-
   return $output;
 }
