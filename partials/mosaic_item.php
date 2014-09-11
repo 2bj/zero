@@ -18,7 +18,7 @@ if ( $i % 6 == 0 ) {
 $cover = wp_get_attachment_image_src( get_post_thumbnail_id(), $cover_preset, true);
 
 if ( strstr( $cover[0], 'images/media/default' ) ) {
-  $cover = str_img_src( get_the_content() );
+  $original = $cover = str_img_src( get_the_content() );
   $wp_attach_file = explode( "/", $cover);
   $wp_attach_file = array_slice( array_reverse( $wp_attach_file ), 0, 3 );
   $wp_attach_file = implode( "/", array_reverse( $wp_attach_file) );
@@ -32,6 +32,10 @@ if ( strstr( $cover[0], 'images/media/default' ) ) {
   $cover = wp_get_attachment_image_src( $att_id, $cover_preset, true);
   // print_r($cover);
   $cover = $cover[0];
+
+  if ( strstr( $cover, 'images/media/default' ) ) {
+    $cover = $original;
+  }
 } else {
   $cover = $cover[0];
 }
