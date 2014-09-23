@@ -62,8 +62,8 @@ function zero_scripts_and_styles() {
     wp_deregister_script( 'jquery' );
   }
 
-  wp_register_script( 'scripts', FRONT . '/assets/scripts/scripts.js', array(), 0.92, true );
-  wp_register_style( 'styles', FRONT . '/assets/styles/styles.css', null, 0.92, 'screen' );
+  wp_register_script( 'scripts', FRONT . '/assets/scripts/scripts.js', array(), 0.93, true );
+  wp_register_style( 'styles', FRONT . '/assets/styles/styles.css', null, 0.93, 'screen' );
 
   wp_enqueue_script( 'scripts' );
   wp_enqueue_style( 'styles' );
@@ -114,14 +114,4 @@ function zero_enhancements() {
 
   // Убираем умные кавычки, потому что от их автоматической расстановки только проблемы
   remove_filter('the_content', 'wptexturize');
-}
-
-
-function perfstats() {
-  echo "<script>console.info('" . get_num_queries() . " / "; timer_stop(1);
-  echo "s / ". round( memory_get_usage() / 1024 / 1024, 2 ) . " MB');</script>";
-}
-
-if( WP_DEBUG ) {
-  add_action('wp_footer', 'perfstats');
 }

@@ -16,6 +16,7 @@
     images: [ 'src/images/**/*.{gif,jpg,png,svg}' ],
     scripts: [
       'bower_components/jquery/dist/jquery.js',
+      'bower_components/jquery.lazyload/jquery.lazyload.js',
       'bower_components/fotorama/fotorama.js',
       'bower_components/fitvids/jquery.fitvids.js',
       'bower_components/jquery.autoGrowInput/jquery.autoGrowInput.js',

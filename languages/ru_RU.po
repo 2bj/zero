@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-08-25 13:58+0400\n"
+"PO-Revision-Date: 2014-09-21 23:21+0300\n"
 "Last-Translator: Aleksey Cherenkevich <cherenkevich.com@gmail.com>\n"
 "Language-Team: Aleksey Cherenkevich <cherenkevich.com@gmail.com>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
@@ -166,8 +166,12 @@ msgid "Ruler"
 msgstr "Линейка"
 
 #: editor.php:115
-msgid "Slider"
-msgstr "Слайдер"
+msgid "Fotorama"
+msgstr "Фоторама"
+
+#: editor.php:115
+msgid "Photoset grid"
+msgstr "Мозайка из фото"
 
 #: fields.php:8
 msgid ""

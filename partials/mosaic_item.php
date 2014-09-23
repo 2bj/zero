@@ -4,7 +4,7 @@ $mosaic_data = array(
   'title' => get_the_title()
 );
 
-$size = '';
+$size = 'l';
 if ( $i == 1 ) {
   $size = 'xxl';
 }
@@ -22,8 +22,9 @@ if ( strstr( $cover[0], 'images/media/default' ) ) {
 $mosaic_data['img_src'] = $cover;
 
 ?>
-<div class="mosaic__item <?php echo ( $size ? 'mosaic__item--' . $size : '' ) ?>">
+<div class="mosaic__item <?php echo 'mosaic__item--' . $size ?>">
   <a href="<?php echo $mosaic_data['permalink'] ?>" title="<?php echo strip_tags( $mosaic_data['title'] ); ?>" style="background-image: url(<?php echo $mosaic_data['img_src'] ?>)" class="teaser <?php echo ( $mosaic_data['img_src'] ? '' : 'teaser--noimage' ) ?>">
+    <span class="teaser__overlay"></span>
     <div class="teaser__title"><?php echo $mosaic_data['title']; ?></div>
   </a>
 </div>

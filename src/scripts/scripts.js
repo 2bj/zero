@@ -8,11 +8,15 @@
   if ( $( '.mosaic__wrapper' ).length ) {
     $( '.mosaic__wrapper' ).masonry( {
       itemSelector: '.mosaic__item',
-      columnWidth: 330,
-      isFitWidth: true
+      columnWidth: '.mosaic__item--l',
+      gutter: 0
     } );
   }
 
+
+  $( '.post__content img' ).lazyload({
+    effect : "fadeIn"
+  });
 
   $( '.post__content iframe[src*="soundcloud"]' )
     .parents( 'p' )

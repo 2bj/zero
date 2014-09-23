@@ -21,7 +21,7 @@ function sliderImageToAnchor( $html ) {
 }
 
 function sliderImagesToAnchors( $html ) {
-  return preg_replace_callback( '/<img(.*?)>/si', sliderImageToAnchor, $html[0] );
+  return preg_replace_callback( '/<img(.*?)>/si', 'sliderImageToAnchor', $html[0] );
 }
 
 function photosetGrid( $html ) {
@@ -41,7 +41,7 @@ function photosetGrid( $html ) {
 add_filter( 'the_content', 'zero_slider' );
 function zero_slider( $html ) {
   $output = $html;
-  $output = preg_replace_callback( '!<(?:div|p) class="slider">(.*?)</(?:div|p)>!si', sliderImagesToAnchors, $html );
+  $output = preg_replace_callback( '!<(?:div|p) class="slider">(.*?)</(?:div|p)>!si', 'sliderImagesToAnchors', $html );
   return $output;
 }
 
@@ -49,6 +49,6 @@ function zero_slider( $html ) {
 add_filter( 'the_content', 'zero_grid' );
 function zero_grid( $html ) {
   $output = $html;
-  $output = preg_replace_callback( '!<(?:div|p) class="grid">(.*?)</(?:div|p)>!si', photosetGrid, $html );
+  $output = preg_replace_callback( '!<(?:div|p) class="grid">(.*?)</(?:div|p)>!si', 'photosetGrid', $html );
   return $output;
 }

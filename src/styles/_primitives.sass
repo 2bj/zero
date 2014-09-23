@@ -73,7 +73,7 @@ h1
   +fs(20px, 35px)
   font-weight: 700
   margin: 0
-  letter-spacing: 3px
+  letter-spacing: 2px
 
   a
     padding-top: 20px
@@ -86,7 +86,7 @@ h2
   +fs(20px, 35px)
   font-weight: 700
   margin: 44px 0 16px
-  letter-spacing: 4px
+  letter-spacing: 2px
   a
     padding-top: 20px
 
@@ -153,7 +153,7 @@ img
   body p:last-child &,
   .post__content p:last-child &
     margin-bottom: -112px
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-bottom: -52px
 
 .fluid-width-video-wrapper
@@ -175,13 +175,13 @@ img
 
   .post--notitle .post__content p:first-child &
     margin-top: -111px
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-top: -52px
 
   body p:last-child &,
   .post__content p:last-child &
     margin-bottom: -112px
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-bottom: -52px
 
 
@@ -201,7 +201,7 @@ p.soundcloud
     @media screen and (min-height: 550px)
       padding-bottom: 550px
 
-    @media screen and (min-height: 500px)
+    @media screen and (min-height: 600px)
       padding-bottom: 600px
 
     @media screen and (min-height: 700px)
@@ -224,6 +224,7 @@ p.soundcloud
     bottom: 0
     right: 0
     height: 100%
+    width: 100%
     background-color: rgba($black, .2)
 
   body &:first-child,
@@ -231,11 +232,13 @@ p.soundcloud
     margin-top: 9px
   .post--notitle .post__content &:first-child
     margin-top: -120px
+    @media screen and (max-width: 568px)
+      margin-top: -60px
 
   body &:last-child,
   .post__content &:last-child
     margin-bottom: -112px
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-bottom: -52px
 
 
@@ -247,6 +250,11 @@ em
 strong,
 span.caps
   +caps
+
+// em,
+// i
+//   font-family: PT Serif, serif
+//   font-size: 101%
 
 .small-text, .caption
   +small
@@ -314,10 +322,10 @@ blockquote
     position: static !important
     display: block !important
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-bottom: -5px !important
 
-  @media screen and (max-width: 700px)
+  @media screen and (max-width: 568px)
     width: 100%
     margin: 0 0 41px
 
@@ -374,7 +382,7 @@ pre,
   .post__content &:last-child
     margin-bottom: -112px !important
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-bottom: -52px !important
 
 .post__content .syntaxhighlighter
@@ -411,7 +419,7 @@ pre,
   .post__content &:last-child
     margin-bottom: -112px !important
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-bottom: -52px !important
 
 
@@ -454,4 +462,4 @@ table
 
   .inset-left + &,
   .inset-right + &
-    width: 534px
+    width: auto

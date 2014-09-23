@@ -19,13 +19,25 @@ p, h1, h2, h3, h4, h5, h6, li, blockquote {
 	background-color: rgba(255, 255, 255, .9);
 }
 
+.wpview-wrap,
 .mce-object,
 .mce-object-iframe,
 .mceItemMedia.mceItemIframe {
 	width: 960px;
 	max-width: 960px;
-	height: 400px !important;
 	margin-bottom: 53px;
+  background-color: #FFF;
+  margin-left: -120px;
+  line-height: 0 !important;
+}
+
+.wpview-wrap iframe {
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wpview-wrap p {
+  margin: 0 !important;
 }
 
 .inverse img,

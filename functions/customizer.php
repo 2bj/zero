@@ -109,18 +109,18 @@ function zero_register_theme_customizer( $wp_customize ) {
 	/**
 	 * Настройка fb:admins
 	 */
-	$wp_customize->add_setting(
-		'zero_og_fb',
-		array()
-	);
-	$wp_customize->add_control(
-		'zero_og_fb',
-		array(
-			'section'	=> 'zero_og',
-			'label'		=> __( 'Your Facebook ID', 'zero' ),
-			'type'		=> 'text'
-		)
-	);
+	// $wp_customize->add_setting(
+	// 	'zero_og_fb',
+	// 	array()
+	// );
+	// $wp_customize->add_control(
+	// 	'zero_og_fb',
+	// 	array(
+	// 		'section'	=> 'zero_og',
+	// 		'label'		=> __( 'Your Facebook ID', 'zero' ),
+	// 		'type'		=> 'text'
+	// 	)
+	// );
 
 	/**
 	 * Настройка og:image

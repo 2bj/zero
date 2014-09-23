@@ -31,7 +31,7 @@ add_theme_support( 'post-thumbnails', array( 'post' ) );
  */
 add_filter( 'jpeg_quality', 'zero_jpeg_quality' );
 function zero_jpeg_quality() {
-  return 100;
+  return 80;
 }
 
 /**

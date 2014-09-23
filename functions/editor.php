@@ -112,7 +112,7 @@ function zero_mce_before_init( $settings ) {
       'classes' => 'hr'
     ),
     array(
-      'title' => __( 'Slider', 'zero' ),
+      'title' => __( 'Fotorama', 'zero' ),
       'block' => 'div',
       'classes' => 'slider'
     ),
@@ -144,7 +144,7 @@ add_filter('mce_external_plugins', 'my_mce_external_plugins');
 add_filter("mce_buttons", "extended_editor_mce_buttons", 0);
 function extended_editor_mce_buttons( $buttons ) {
   return array(
-    'styleselect', 'bold', 'strikethrough', 'bullist', 'numlist', 'alignleft', 'aligncenter', 'alignright', 'link', 'unlink', 'anchor', 'superscript', 'subscript', 'charmap', 'wp_more', 'table'
+    'styleselect', 'bold', 'italic','strikethrough', 'bullist', 'numlist', 'alignleft', 'aligncenter', 'alignright', 'link', 'unlink', 'anchor', 'superscript', 'subscript', 'charmap', 'wp_more', 'table'
   );
 }
 

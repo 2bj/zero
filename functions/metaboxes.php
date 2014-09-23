@@ -59,6 +59,10 @@ function show_custom_meta_box( $custom_meta_fields ) {
 	echo '<div class="metabox-form">';
 	foreach ( $custom_meta_fields as $field ) {
 
+    if ( !isset( $field['desc'] ) ) {
+      $field['desc'] = '';
+    }
+
 		// get value of this field if it exists for this post
 		$meta = get_post_meta( $post->ID, $field['id'], true );
 
@@ -162,7 +166,7 @@ function save_custom_meta( $post_id ) {
 	global $custom_meta_fields;
 
 	// verify nonce
-	if ( !wp_verify_nonce( $_POST['custom_meta_box_nonce'], basename( __FILE__ ) ) ) {
+	if ( !isset( $_POST['custom_meta_box_nonce'] ) || !wp_verify_nonce( $_POST['custom_meta_box_nonce'], basename( __FILE__ ) ) ) {
 		return $post_id;
 	}
 

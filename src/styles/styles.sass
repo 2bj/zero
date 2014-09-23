@@ -17,11 +17,17 @@ body.body
 .header
   width: 100%
   max-width: 960px
-  margin: 48px 0 109px 60px
+  margin: 48px 0 0 60px
+  padding-bottom: 109px
 
   .body--center &
     margin-left: auto
     margin-right: auto
+
+  .body--mosaic &
+    background-color: $white
+    position: relative
+    z-index: 3
 
   @media screen and (max-width: 1080px)
     margin-left: auto
@@ -31,25 +37,25 @@ body.body
     width: 100%
     padding-left: 12.5%
     padding-right: 12.5%
-    margin-bottom: 109px
+    height: auto
 
-  @media screen and (max-width: 700px)
-    margin-bottom: 49px
+  @media screen and (max-width: 568px)
+    padding-bottom: 49px
 
   .header__logo
     display: inline-block
     vertical-align: baseline
-    margin: 0 10px 0 0
+    margin: 0 23px 0 0
 
-    @media screen and (max-width: 960px)
+    @media screen and (max-width: 568px)
       display: block
 
   .header__nav
     display: inline-block
     vertical-align: baseline
-    margin: 0 9px 0 0
+    margin: 0 23px 0 0px
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       display: block
 
   .header__search
@@ -67,7 +73,7 @@ body.body
     +base
     +caps
     position: absolute
-    top: 10px
+    top: 11px
     left: 0
     z-index: 2
     cursor: pointer
@@ -93,10 +99,8 @@ body.body
     border: none
     background: none
     width: 30px
-    // transition: all 0.2s ease
 
     &.search__field--visible
-
 
     &:focus
       outline: none
@@ -117,6 +121,8 @@ body.body
   @media screen and (max-width: 960px)
     padding-left: 12.5%
     width: 100%
+
+  @media screen and (max-width: 568px)
     margin-bottom: 52px
 
   .meta__date
@@ -130,7 +136,7 @@ body.body
       margin-right: 27px
       margin-bottom: -3px
 
-      @media screen and (max-width: 700px)
+      @media screen and (max-width: 568px)
         margin-right: 17px
 
   .meta__tags
@@ -150,7 +156,7 @@ body.body
   .post + &
     margin-top: -72px
 
-    @media screen and (max-width: 960px)
+    @media screen and (max-width: 568px)
       margin-top: -12px
 
 .date
@@ -176,12 +182,14 @@ body.body
 
   @media screen and (max-width: 960px)
     width: 100%
+
+  @media screen and (max-width: 568px)
     margin-bottom: 60px
 
   .post__share
     position: absolute
-    top: 0
-    right: 0
+    top: 60px
+    right: 60px
     z-index: 2000
     transition: opacity 0.2s ease
     opacity: 0
@@ -202,7 +210,7 @@ body.body
       background-repeat: no-repeat
       background-size: cover
 
-      @media screen and (max-width: 600px)
+      @media screen and (max-width: 568px)
         min-height: 400px
 
       a
@@ -223,7 +231,7 @@ body.body
       width: auto
       padding-right: 60px
 
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 568px)
       position: relative
       left: 0
       bottom: 0
@@ -248,7 +256,7 @@ body.body
         span
           border-bottom-color: $color
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       padding-top: 52px
       width: 100%
 
@@ -259,14 +267,14 @@ body.body
     overflow: hidden
     hyphens: auto
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       padding-top: 51px
       padding-bottom: 52px
 
     & > *:last-child
       margin-bottom: 0
 
-      @media screen and (max-width: 700px)
+      @media screen and (max-width: 568px)
         padding-top: 0
 
   &:hover
@@ -306,7 +314,7 @@ body.body
   &.post--notitle
     .post__lead
 
-      @media screen and (max-width: 600px)
+      @media screen and (max-width: 568px)
         padding-top: 51px
 
   .body--white &.post--page .post__title
@@ -342,6 +350,9 @@ body.body
       margin-right: 39px
       display: inline-block
 
+    @media screen and (max-width: 320px)
+      margin-right: 15px
+
   .footer__credits
     float: right
     width: 50%
@@ -365,6 +376,7 @@ body.body
 
     .footer__pagination
       display: none
+
     .footer__credits
       float: none
       width: 100%
@@ -374,14 +386,19 @@ body.body
     margin-left: auto
     margin-right: auto
 
-  .mosaic + &
+  .body--mosaic &
     width: auto
     margin-bottom: 52px
     margin-top: -72px
     margin-left: 60px
+    position: fixed
+    z-index: 1
+    bottom: 0
+    left: 0
 
     @media screen and (max-width: 1080px)
       margin-left: 30px
+
     @media screen and (max-width: 1000px)
       margin-top: -12px
       margin-left: 0px
@@ -419,7 +436,7 @@ body.body
     &:before
       content: none
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-right: 16px
 
     .links__link
@@ -430,7 +447,7 @@ body.body
     &:last-child
       margin-right: 0
 
-      @media screen and (max-width: 700px)
+      @media screen and (max-width: 568px)
         margin-right: 0
 
     &.links__item--active
@@ -461,7 +478,7 @@ body.body
   .comments__wrapper
     padding: 102px 12.5% 99px 12.5%
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       padding-top: 42px
       padding-bottom: 39px
 
@@ -483,9 +500,9 @@ body.body
 
   .share__wrapper
     position: absolute
-    top: 115px
+    top: 55px
     left: 0
-    right: 104px
+    right: 44px
     z-index: 2
     text-align: right
     opacity: 0
@@ -512,9 +529,9 @@ body.body
   .share__caller
     position: relative
     z-index: 1
-    padding-top: 118px
-    padding-right: 118px
-    padding-bottom: 120px
+    padding-top: 58px
+    padding-right: 58px
+    padding-bottom: 60px
     height: 146px
     transition: opacity 0.2s ease
 
@@ -561,61 +578,83 @@ body.body
 
 
 .mosaic
-  padding: 0 45px
-  margin-bottom: 150px
+  padding: 0 5px 0
+  margin-bottom: 119px
+  position: relative
+  z-index: 2
+  background-color: $white
+  overflow: hidden
 
-  @media screen and (max-width: 1080px)
-    padding: 0 15px
-    margin-left: auto
-    margin-right: auto
-
-  @media screen and (max-width: 1000px)
+  @media screen and (max-width: 568px)
     padding: 0
-    margin-bottom: 60px
+
+  .mosaic__wrapper
+    @media screen and (max-width: 568px)
+      width: 100% !important
+      position: static !important
 
   .mosaic__item
-    margin: 0 0 30px
+    margin: 0 0 10px
+    padding: 0 5px
 
-    @media screen and (max-width: 1000px)
-      margin: 0
-      width: 100%
+    +wh(20%, 300px)
+    &.mosaic__item--xl
+      +wh(40%, 610px)
+    &.mosaic__item--xxl
+      +wh(60%, 920px)
 
-  .body--center &
-    .mosaic__wrapper
-      margin-left: auto
-      margin-right: auto
+    @media screen and (max-width: 1440px)
+      +wh(25%, 200px)
+      &.mosaic__item--xl
+        +wh(50%, 410px)
+      &.mosaic__item--xxl
+        +wh(75%, 620px)
+
+    @media screen and (max-width: 1024px)
+      +wh(33.3333333%, 250px)
+      &.mosaic__item--xl
+        +wh(66.6666666%, 510px)
+      &.mosaic__item--xxl
+        +wh(100%, 510px)
+
+    &, &.mosaic__item--xl, &.mosaic__item--xxl
+
+      @media screen and (max-width: 568px)
+        margin: 0 !important
+        width: 100% !important
+        position: static !important
+        height: 320px !important
+        padding: 0
+        margin: 0
 
 .teaser
   display: block
   position: relative
-  width: 300px
-  height: 200px
+  +wh(100%, 100%)
   background-position: center
   background-repeat: no-repeat
   background-size: cover
   color: $black
-  margin-left: 15px
-  margin-right: 15px
 
   &.teaser--noimage
     // background-color: rgba($black, .2)
     border: 1px solid $white
 
-  @media screen and (max-width: 1000px)
-    margin: 0
-    width: 100%
-    height: 500px
-
-  @media screen and (max-width: 800px)
-    height: 400px
-  @media screen and (max-width: 700px)
-    height: 300px
-
-  &:hover
-    color: $color
+  .teaser__overlay
+    background-color: $grey
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1
+    transition: opacity .2s ease
+    opacity: 0
 
   .teaser__title
+    // display: none
     position: absolute
+    z-index: 2
     bottom: 20px
     left: 0px
     +caps
@@ -624,46 +663,27 @@ body.body
     padding: 14px 19px 13px
     max-width: 75%
 
-  .mosaic__item--xl &
-    width: 630px
-    height: 430px
+  &:hover
+    color: $color
 
-    @media screen and (max-width: 1000px)
-      width: 100%
-      height: 500px
+    .teaser__overlay
+      opacity: 0.3
 
-    @media screen and (max-width: 800px)
-      height: 400px
-    @media screen and (max-width: 700px)
-      height: 300px
 
-  .mosaic__item--xxl &
-    width: 960px
-    height: 660px
-
-    @media screen and (max-width: 1080px)
-      width: 630px
-      height: 430px
-
-    @media screen and (max-width: 1000px)
-      width: 100%
-      height: 500px
-
-    @media screen and (max-width: 800px)
-      height: 400px
-    @media screen and (max-width: 700px)
-      height: 300px
 
 .pagination
   margin-left: -14px
 
   &.pagination--desktop
     display: block
-    @media screen and (max-width: 700px)
+
+    @media screen and (max-width: 568px)
       display: none
+
   &.pagination--mobile
     display: none
-    @media screen and (max-width: 700px)
+
+    @media screen and (max-width: 568px)
       display: block
 
   .page-numbers
@@ -674,7 +694,7 @@ body.body
     +inverted-link
     padding: 10px 14px
 
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       padding-left: 10px
       padding-right: 10px
 
@@ -686,6 +706,8 @@ body.body
       position: relative
       top: -3px
       color: $black
+      margin-left: -6px
+      margin-right: -10px
 
     &.current
       color: $color
@@ -702,7 +724,7 @@ body.body
 
   li
     display: inline-block
-    margin: 0 -4px 0 0
+    margin: 0 23px 0 0
     padding: 0
     vertical-align: baseline
 
@@ -715,7 +737,7 @@ body.body
     a
       +caps
       +inverted-link
-      padding: 10px 14px
+      padding: 10px 0
 
     &.current_page_item,
     &.current-menu-item
@@ -723,23 +745,8 @@ body.body
         color: $color
         cursor: text
 
-    &.links__item--ellipsis
-      opacity: 0.2
-      position: relative
-      top: -3px
-      .links__link
-        color: $black
-
-  @media screen and (max-width: 960px)
-    .menu-item:first-child
-      a
-        padding-left: 0
-
-  @media screen and (max-width: 700px)
-    .menu-item
+    @media screen and (max-width: 568px)
       display: block
-      a
-        padding-left: 0
 
 .wp-smiley
   display: none
@@ -772,7 +779,7 @@ body.body
 
   .post__content &:last-child
     margin-bottom: -112px !important
-    @media screen and (max-width: 700px)
+    @media screen and (max-width: 568px)
       margin-bottom: -52px !important
       .photoset-cell
         margin-bottom: 0 !important

@@ -71,7 +71,7 @@ if ( WPLANG == 'ru_RU' )
     <meta http-equiv="content-type"     content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible"  content="IE=edge,chrome=1">
     <title><?php echo $meta['title'] ?></title>
-    <meta name="viewport"               content="width=device-width">
+    <meta name="viewport"               content="width=device-width, initial-scale=1.0">
     <meta name="description"            content="<?php echo $meta['description'] ?>">
 
     <meta property="og:url"             content="<?php echo $meta['link'] ?>">
@@ -95,7 +95,7 @@ if ( WPLANG == 'ru_RU' )
     ?>
 
     <?php endif; ?>
-    <meta property="fb:admins"          content="<?php echo get_theme_mod( 'zero_og_fb' ); ?>" />
+    <!-- <meta property="fb:admins"          content="<?php echo get_theme_mod( 'zero_og_fb' ); ?>" /> -->
 
     <meta name="twitter:card"           value="summary">
     <meta name="twitter:site"           value="<?php echo TWITTER ?>">
@@ -120,4 +120,4 @@ if ( WPLANG == 'ru_RU' )
     ?>
     <?php wp_head() ?>
   </head>
-  <body class="body <?php echo ( ( is_page() || $is_mosaic ) ? 'body--white' : '' ) ?> <?php echo ( get_theme_mod( 'zero_theme_layout' ) == 'center' ? 'body--center' : '' ) ?>">
+  <body class="body <?php echo ( $is_mosaic ? 'body--mosaic' : '' ) ?> <?php echo ( ( is_page() || $is_mosaic ) ? 'body--white' : '' ) ?> <?php echo ( get_theme_mod( 'zero_theme_layout' ) == 'center' ? 'body--center' : '' ) ?>">
