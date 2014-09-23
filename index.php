@@ -4,7 +4,7 @@
 
     $fb_like = trim( get_theme_mod( 'zero_og_fb_like' ) );
     if ( $fb_like ) {
-      echo $fb_like;
+      echo str_replace( 'ru_RU', 'en_GB', $fb_like );
     }
     ?>
 
