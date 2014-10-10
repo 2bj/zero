@@ -1,0 +1,18 @@
+{
+  "name": "zero",
+  "version": "0.9.3",
+  "description": "Zero Theme",
+  "authors": [
+    "Aleksey Cherenkevich <cherenkevich.com@gmail.com>"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "normalize-scss": "*",
+    "fitvids": "~1.1.0",
+    "fotorama": "~4.6.2",
+    "jquery.autoGrowInput": "~0.0.2",
+    "photoset-grid": "*",
+    "jquery-masonry": "~3.1.5",
+    "jquery.lazyload": "~1.9.3"
+  }
+}

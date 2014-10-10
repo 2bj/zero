@@ -1,0 +1,136 @@
+.fotorama__arr,.fotorama__fullscreen-icon,.fotorama__video-close,.fotorama__video-play
+  background-image: none
+
+.slider
+  margin: 51px -120px 38px
+  width: 960px
+  text-align: center
+  font-size: 0
+
+  & > a
+    display: inline-block
+    margin: 0
+    padding: 0
+    vertical-align: top
+
+    img
+      display: block
+
+  @media screen and (max-width: 960px)
+    width: 134%
+    margin-left: -16.7%
+    margin-right: -16.7%
+
+.post__content .slider:first-child,
+.post__content style:first-child + .fotorama--hidden + .slider
+  margin-top: 8px
+
+.post--notitle .post__content .slider:first-child,
+.post--notitle .post__content > style:first-child + .fotorama--hidden + .slider
+  margin-top: -120px
+  @media screen and (max-width: 568px)
+    margin-top: -60px !important
+
+.post__content .slider:last-child
+  margin-bottom: -112px !important
+  @media screen and (max-width: 568px)
+    margin-bottom: -52px !important
+
+body .slider:first-child
+  margin-top: 0
+
+body .slider:last-child
+  margin-bottom: 0
+
+.fotorama
+
+  .fotorama__wrap
+
+    .fotorama__stage
+
+      .fotorama__stage__shaft
+        .fotorama__stage__frame
+
+          .fotorama__img
+            margin: 0
+            transform: none
+
+          .fotorama__caption
+            bottom: 40px
+            left: 0
+            text-align: left
+            max-width: 75%
+            min-width: 250px
+
+            @media screen and (max-width: 960px)
+              bottom: 20px
+            @media screen and (max-width: 568px)
+              bottom: 10px
+              max-width: 95%
+
+            .fotorama__caption__wrap
+              +base
+              +small
+              color: $black
+              background-color: $white
+              padding: 10px 19px 13px
+              width: auto !important
+              min-width: 0 !important
+
+              @media screen and (max-width: 960px)
+
+
+              @media screen and (max-width: 568px)
+                text-transform: none
+                letter-spacing: 0
+                +base
+                +small
+                line-height: 18px
+                padding: 5px 10px 9px
+
+      .fotorama__arr
+        +wh(32px, 60px)
+        margin-top: -30px
+        background-repeat: no-repeat
+        background-position: center
+        background-size: auto
+
+        &.fotorama__arr--prev
+          left: 45px
+          background-image: url(../images/larr.svg)
+
+          @media screen and (max-width: 768px)
+            left: 10px
+
+        &.fotorama__arr--next
+          right: 45px
+          background-image: url(../images/rarr.svg)
+
+          @media screen and (max-width: 568px)
+            right: 10px
+
+        @media screen and (max-width: 568px)
+          +wh(16px, 30px)
+          background-size: cover
+          margin-top: -15px
+
+
+    .fotorama__nav-wrap
+
+      .fotorama__nav
+        // text-align: left
+
+        .fotorama__nav__shaft
+
+          .fotorama__thumb-border
+            border-color: $color
+            background: $color
+            opacity: .8
+
+          .fotorama__nav__frame
+            .fotorama__thumb
+              img
+                margin: 0
+                transform: none
+                position: static
+

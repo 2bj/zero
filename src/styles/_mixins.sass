@@ -1,0 +1,40 @@
+=fs($fs, $lh)
+  font-size: $fs
+  line-height: $lh
+
+=wh($w, $h)
+  width: $w
+  height: $h
+
+=clear()
+  *zoom: 1
+  &:before,
+  &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+=base()
+  +fs(17px, 29px)
+  font-family: 'Clear Sans', sans-serif
+  color: $black
+  font-weight: 300
+
+=caps()
+  text-transform: uppercase
+  font-family: 'PT Sans Caption', sans-serif
+  letter-spacing: 2px
+  font-weight: bold
+  font-size: 13px
+  line-height: 1
+
+=small()
+  +fs(14px, 25px)
+
+=inverted-link
+  color: $black
+  &:hover
+    color: $color
+  &:active
+    color: $black

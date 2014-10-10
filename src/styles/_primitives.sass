@@ -1,0 +1,465 @@
+*
+  box-sizing: border-box
+
+::selection
+  background: rgba($color, .2)
+  text-shadow: none
+
+
+body
+  +base
+
+a
+  text-decoration: none
+  color: $color
+  transition: all 0.2s ease
+
+  &:hover
+    color: $black
+  &:active
+    color: $color
+  &:focus
+    outline: none
+
+ul
+  margin: 0 0 20px
+  padding: 0
+  list-style-type: none
+
+  li
+    display: block
+    margin: 0 0 10px 0
+    padding: 0px 0px 0px 20px
+    position: relative
+
+    &:before
+      +caps
+      +wh(13px, 1px)
+      content: ''
+      display: block
+      position: absolute
+      background-color: rgba($black, .5)
+      top: 15px
+      left: 0
+
+    &:last-child
+      margin-bottom: 0
+
+ol
+  margin: 0 0 20px
+  padding: 0
+  counter-reset: item
+
+  li
+    display: block
+    margin: 0 0 10px 0
+    padding: 0px
+    position: relative
+    list-style-type: decimal-leading-zero
+
+    &:before
+      +caps
+      content: counter(item) "."
+      counter-increment: item
+      font-size: 13px
+      display: inline-block
+      padding-right: 5px
+
+    &:last-child
+      margin-bottom: 0
+
+h1
+  +caps
+  +fs(20px, 35px)
+  font-weight: 700
+  margin: 0
+  letter-spacing: 2px
+
+  a
+    padding-top: 20px
+    color: $black
+    &:hover
+      color: $color
+
+h2
+  +caps
+  +fs(20px, 35px)
+  font-weight: 700
+  margin: 44px 0 16px
+  letter-spacing: 2px
+  a
+    padding-top: 20px
+
+  &:first-child
+    margin-top: 1px
+
+h3
+  +caps
+  line-height: 29px
+  margin: 43px 0 17px
+
+  &:first-child
+    margin-top: 0px
+
+.hr,
+hr
+  margin: 52px -16.7% 48px
+  border: none
+  border-top: 1px solid $grey
+  clear: both
+  padding: 0
+  height: 0px
+
+  .slider + &
+    margin-top: -38px
+
+  // .post--page &
+  //   border-top-color: rgba($black, .1)
+
+img
+  max-width: 960px
+  height: auto !important
+  text-align: center
+  background-color: rgba($black, .2)
+  clear: both
+
+  @media screen and (max-width: 960px)
+    max-width: 100%
+
+  p &
+    max-width: 960px
+    width: auto
+    height: auto
+    display: block
+    transform: translate(-50%,0)
+    margin: 52px 0 48px 50%
+
+    @media screen and (max-width: 960px)
+      max-width: 134%
+
+  p.with-margins &
+    width: 100%
+    max-width: 100%
+    transform: none
+    margin-left: 0
+    margin-right: 0
+
+  body p:first-child &,
+  .post__content p:first-child &
+    margin-top: 9px
+  .post--notitle .post__content p:first-child &
+    margin-top: -120px
+
+  body p:last-child &,
+  .post__content p:last-child &
+    margin-bottom: -112px
+    @media screen and (max-width: 568px)
+      margin-bottom: -52px
+
+.fluid-width-video-wrapper
+  clear: both
+
+  iframe
+    margin: 0
+    background-color: rgba($black, .2)
+
+  p > &
+    width: 134%
+    padding-top: 75% !important
+    transform: translate(-50%,0)
+    margin: 51px 0 49px 50%
+
+  body p:first-child &,
+  .post__content p:first-child &
+    margin-top: 9px
+
+  .post--notitle .post__content p:first-child &
+    margin-top: -111px
+    @media screen and (max-width: 568px)
+      margin-top: -52px
+
+  body p:last-child &,
+  .post__content p:last-child &
+    margin-bottom: -112px
+    @media screen and (max-width: 568px)
+      margin-bottom: -52px
+
+
+p.soundcloud
+  width: 134%
+  display: block
+  transform: translate(-50%,0)
+  margin: 52px 0 48px 50%
+  position: relative
+  clear: both
+
+  &:after
+    content: ''
+    display: block
+    padding-bottom: 480px
+
+    @media screen and (min-height: 550px)
+      padding-bottom: 550px
+
+    @media screen and (min-height: 600px)
+      padding-bottom: 600px
+
+    @media screen and (min-height: 700px)
+      padding-bottom: 700px
+
+    @media screen and (min-height: 800px)
+      padding-bottom: 800px
+
+    @media screen and (min-height: 960px)
+      padding-bottom: 960px
+
+    @media screen and (max-width: 960px)
+      padding-bottom: 100%
+
+  iframe
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    height: 100%
+    width: 100%
+    background-color: rgba($black, .2)
+
+  body &:first-child,
+  .post__content &:first-child
+    margin-top: 9px
+  .post--notitle .post__content &:first-child
+    margin-top: -120px
+    @media screen and (max-width: 568px)
+      margin-top: -60px
+
+  body &:last-child,
+  .post__content &:last-child
+    margin-bottom: -112px
+    @media screen and (max-width: 568px)
+      margin-bottom: -52px
+
+
+em
+
+.caps, .lead
+  +caps
+
+strong,
+span.caps
+  +caps
+
+// em,
+// i
+//   font-family: PT Serif, serif
+//   font-size: 101%
+
+.small-text, .caption
+  +small
+
+p
+  margin: 0 0 20px
+  position: relative
+
+  blockquote &
+
+  &.small-text
+
+  &.caption
+    margin-top: -18px
+    margin-bottom: 41px
+
+  &.caps
+    +caps
+    line-height: 29px
+
+  &.lead
+    +caps
+    line-height: 29px
+
+blockquote
+  +caps
+  line-height: 29px
+  margin: 52px -16.7% 48px
+  padding: 51px 16.7% 49px
+  border-top: 1px solid $grey
+  border-bottom: 1px solid $grey
+  clear: both
+
+  p
+    margin: 0
+    padding-left: 0px
+    line-height: 29px
+
+  body &:first-child,
+  .post__content &:first-child
+    margin-top: 9px
+  .post--notitle .post__content &:first-child
+    margin-top: -120px
+
+  body &:last-child,
+  .post__content &:last-child
+    margin-bottom: 0
+    border-bottom: none
+    padding-bottom: 0
+
+.inset-left,
+.inset-right
+  +small
+  width: 23%
+  position: relative
+  z-index: 2
+  padding-top: 3px
+  margin-bottom: 33px
+
+  .fluid-width-video-wrapper,
+  img
+    margin: 9px 0 -15px !important
+    transform: translate(0, 0) !important
+    max-width: 100% !important
+    position: static !important
+    display: block !important
+
+    @media screen and (max-width: 568px)
+      margin-bottom: -5px !important
+
+  @media screen and (max-width: 568px)
+    width: 100%
+    margin: 0 0 41px
+
+    & + p
+      margin-left: 0 !important
+      margin-right: 0 !important
+
+.inset-left
+  float: left
+  margin-right: 3%
+
+  & + p
+    margin-left: 26%
+
+.inset-right
+  float: right
+  margin-left: 3%
+
+  & + p
+    margin-right: 26%
+
+
+
+.inset-right-teaser
+  float: right
+  width: 240px
+  margin-right: -120px
+  margin-left: 40px
+  margin-top: 10px
+  margin-bottom: 30px
+  display: block
+
+pre,
+.code,
+  font-family: monospace
+  +fs(14px, 24px)
+  background-color: rgba($grey, .1)
+  padding: 52px 16.7% 51px !important
+  margin: 0 -16.7% 48px
+  overflow: auto
+  position: relative
+  // white-space: nowrap
+
+  p + &
+    margin-top: 52px
+
+  body &:first-child,
+  .post__content &:first-child
+    margin-top: 9px
+  .post--notitle .post__content &:first-child
+    margin-top: -120px
+
+  body &:last-child,
+  .post__content &:last-child
+    margin-bottom: -112px !important
+
+    @media screen and (max-width: 568px)
+      margin-bottom: -52px !important
+
+.post__content .syntaxhighlighter
+  background-color: rgba($grey, .1) !important
+  padding: 52px 16.7% 51px !important
+  margin: 52px -16.7% 48px !important
+  width: 134% !important
+
+  table
+    position: relative
+    margin-left: -67px !important
+
+  table td.gutter .line
+    border-right: none !important
+    color: rgba($black, .15) !important
+    opacity: 0
+    transition: all 0.2s ease
+
+  table td.gutter .line,
+  table td.code .line
+    background-color: transparent !important
+    padding-top: 3px !important
+    padding-bottom: 3px !important
+
+  &:hover
+    table td.gutter .line
+      opacity: 1
+
+  body &:first-child,
+  .post__content &:first-child
+    margin-top: 9px !important
+
+  body &:last-child,
+  .post__content &:last-child
+    margin-bottom: -112px !important
+
+    @media screen and (max-width: 568px)
+      margin-bottom: -52px !important
+
+
+table
+  width: 100%
+  margin-top: 31px
+  margin-bottom: 28px
+
+  body &:first-child, .post__content &:first-child
+    margin-top: 8px
+
+  .post--notitle .post__content &:first-child
+    margin-top: -128px
+
+  body &:last-child, .post__content &:last-child
+    margin-bottom: 8px !important
+
+  thead
+
+    tr
+      td, th
+        +caps
+        font-size: 13px !important
+        padding: 0 15px 15px 0px
+        border-bottom: 2px solid #000
+
+        &:last-child
+          padding-right: 0
+  tbody
+    tr
+      td
+        border-bottom: 1px solid #e1e1e1
+        padding: 7px 10px 10px 0px
+        font-size: 14px
+        line-height: 25px
+        vertical-align: top
+
+        &:last-child
+          padding-right: 0
+
+  .inset-left + &,
+  .inset-right + &
+    width: auto

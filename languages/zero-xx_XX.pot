@@ -1,0 +1,209 @@
+# Copyright (C) 2014 the WordPress team
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Zero 0.8\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/twentyfourteen\n"
+"POT-Creation-Date: 2014-04-16 18:29:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-08-18 23:38+0300\n"
+"Last-Translator: Aleksey Cherenkevich <cherenkevich.com@gmail.com>\n"
+"Language-Team: Aleksey Cherenkevich <cherenkevich.com@gmail.com>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+"X-Generator: Poedit 1.6.7\n"
+
+#: customizer.php:33
+msgid "Layout"
+msgstr "Лейаут"
+
+#: customizer.php:52
+msgid "Layout alignment"
+msgstr "Выравнивание"
+
+#: customizer.php:55
+msgid "To left"
+msgstr "Влево"
+
+#: customizer.php:56
+msgid "To center"
+msgstr "По центру"
+
+#: customizer.php:67
+msgid "Likes, comments, etc."
+msgstr "Лайки, комменты и т. д."
+
+#: customizer.php:75
+msgid "Comma separated list of tags with matrix layout on its archive page"
+msgstr "Список тегов через запятую, архивные страницы которых отображать мозайкой"
+
+#: customizer.php:85
+msgid "Twitter username"
+msgstr "Логин в Твиттере"
+
+#: customizer.php:101
+msgid "Your Facebook ID"
+msgstr "Ваш Фейсбук ID"
+
+#: customizer.php:118
+msgid "Share picture"
+msgstr "Картинка для расшаривания"
+
+#: customizer.php:174
+msgid "Disqus username"
+msgstr "Логин в Disqus"
+
+#: customizer.php:185
+msgid "Admin panel"
+msgstr "Админка"
+
+#: customizer.php:200
+msgid "Simplify admin panel"
+msgstr "Упростить админку"
+
+#: customizer.php:211 customizer.php:231
+msgid "Counters code"
+msgstr "Коды счетчиков"
+
+#: dates.php:22
+msgid "January"
+msgstr "Января"
+
+#: dates.php:22
+msgid "February"
+msgstr "Февраля"
+
+#: dates.php:22
+msgid "March"
+msgstr "Марта"
+
+#: dates.php:22
+msgid "April"
+msgstr "Апреля"
+
+#: dates.php:22
+msgid "May"
+msgstr "Мая"
+
+#: dates.php:22
+msgid "June"
+msgstr "Июня"
+
+#: dates.php:22
+msgid "July"
+msgstr "Июля"
+
+#: dates.php:22
+msgid "August"
+msgstr "Августа"
+
+#: dates.php:22
+msgid "September"
+msgstr "Сентября"
+
+#: dates.php:22
+msgid "October"
+msgstr "Октября"
+
+#: dates.php:22
+msgid "November"
+msgstr "Ноября"
+
+#: dates.php:22
+msgid "December"
+msgstr "Декабря"
+
+#: dates.php:55
+msgid "Today"
+msgstr "Сегодня"
+
+#: editor.php:34
+msgid "Paragraph"
+msgstr "Абзац"
+
+#: editor.php:43
+msgid "Header"
+msgstr "Заголовок"
+
+#: editor.php:52
+msgid "Subheader"
+msgstr "Подзаголовок"
+
+#: editor.php:66
+msgid "Quote"
+msgstr "Цитата"
+
+#: editor.php:70
+msgid "Small text"
+msgstr "Мелкий текст"
+
+#: editor.php:85
+msgid "Image caption"
+msgstr "Подпись под картинкой"
+
+#: editor.php:90
+msgid "Code snippet"
+msgstr "Код"
+
+#: editor.php:95
+msgid "Image with margins"
+msgstr "Картинка с полями"
+
+#: editor.php:100
+msgid "Left inset"
+msgstr "Врезка слева"
+
+#: editor.php:105
+msgid "Right inset"
+msgstr "Врезка справа"
+
+#: editor.php:110
+msgid "Ruler"
+msgstr "Линейка"
+
+#: editor.php:115
+msgid "Slider"
+msgstr "Слайдер"
+
+#: fields.php:8
+msgid ""
+"HTML is OK. BTW, if you type an external link it will become the teaser link "
+"instead of the regulat post permalink"
+msgstr ""
+"HTML — ок. Если указать ссылку, то именно она будет использована в тизере "
+"вместо ссылки на пост"
+
+#: fields.php:19
+msgid "Hide the post title"
+msgstr "Не показывать заголовок"
+
+#: images.php:51
+msgid "960 by width"
+msgstr "960 по ширине"
+
+#: images.php:52
+msgid "240 by width"
+msgstr "240 по ширине"
+
+#: metaboxes.php:9
+msgid "Lead paragraph"
+msgstr "Лидовый абзац"
+
+#: index.php:23
+msgid "No posts"
+msgstr "Нет постов"
+
+#: header.php:3
+msgid "To home page"
+msgstr "На главную страницу"
+
+#: header.php:16
+msgid "Search"
+msgstr "Поиск"
+
+#: post.php:91
+msgid "Read More"
+msgstr "Читать дальше"

@@ -1,0 +1,152 @@
+@import 'assets/styles/styles.css';
+
+body {
+	width: 960px !important;
+	padding: 120px !important;
+	background-color: #fafafa;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA8AAAAAQCAYAAADZABYpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NDkxMSwgMjAxMy8xMC8yOS0xMTo0NzoxNiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4Nzg1RjY1ODJEMTExRTM4RkMzRkU3NzU1NzY5MDY0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4Nzg1RjY2ODJEMTExRTM4RkMzRkU3NzU1NzY5MDY0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Mjg3ODVGNjM4MkQxMTFFMzhGQzNGRTc3NTU3NjkwNjQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Mjg3ODVGNjQ4MkQxMTFFMzhGQzNGRTc3NTU3NjkwNjQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5u7PWSAAAAhklEQVR42uzXMREAIAwEQR4Z+NeGjYAECqrMroTwBZeqGvSVZN033i5B103aODYO9g3+z7yaTgAAAIAABgAAAAEMAAAAAhgAAAAEMAAAAAhgAAAAEMAAAAAggAEAAEAAAwAAIIABAABAAAMAAIAABgAAAAEMAAAAAhgAAAAEMAAAAPx2BBgAfZYjHdn6nPMAAAAASUVORK5CYII=');
+	background-repeat: repeat-y;
+	background-position: 0 0;
+	margin: 0;
+}
+body.wp-autoresize {
+  padding: 120px !important;
+  width: 960px !important;
+  max-width: 960px !important;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, blockquote {
+	background-color: rgba(255, 255, 255, .9);
+}
+
+.wpview-wrap,
+.mce-object,
+.mce-object-iframe,
+.mceItemMedia.mceItemIframe {
+	width: 960px;
+	max-width: 960px;
+	margin-bottom: 53px;
+  background-color: #FFF;
+  margin-left: -120px;
+  line-height: 0 !important;
+}
+
+.wpview-wrap iframe {
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wpview-wrap p {
+  margin: 0 !important;
+}
+
+.inverse img,
+.inverse .mceItemMedia.mceItemIframe,
+p.with-margins .mceItemMedia.mceItemIframe {
+	width: 720px;
+	max-width: 720px;
+	height: 500px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.grid,
+.slider {
+	background-color: #fff;
+	padding: 10px;
+	text-align: center;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 29px;
+}
+
+.grid {
+  background-color: rgba(0, 0, 0, .1);
+  margin-top: 50px;
+}
+body .grid:first-child {
+  margin-top: 0px;
+}
+
+.grid + .grid {
+  margin-top: -45px;
+}
+
+  .grid img,
+	.slider img {
+		display: inline-block;
+		vertical-align: top;
+		zoom: 1;
+		*display: inline;
+		*vertical-align: middle;
+		width: auto !important;
+		max-width: 100px !important;
+		height: auto !important;
+		max-height: 100px !important;
+		margin: 5px !important;
+	}
+
+.inset-left,
+.inset-right,
+.with-margins {
+	background-color: #ececec;
+}
+
+td {
+	font-family: 'PT Sans', sans-serif !important;
+	font-size: 16px !important;
+	line-height: 25px !important;
+	margin: 0px !important;
+}
+.mceItemTable,
+.mceItemTable td,
+.mceItemTable th,
+.mceItemTable caption,
+.mceItemVisualAid {
+	border: 1px dotted #ccc !important;
+}
+
+p img.aligncenter {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.wp-more-tag.mce-wp-more {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  position: static;
+  margin: 0;
+  padding: 0;
+  height: 30px !important;
+  width: 100% !important;
+}
+
+pre,
+.code {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.mce-item-anchor {
+  width: 20px !important;
+  height: 20px !important;
+  vertical-align: baseline;
+  margin-bottom: -4px;
+  margin-right: 7px;
+}
+
+.mce-item-table,
+.mce-item-table td,
+.mce-item-table th,
+.mce-item-table caption {
+  border-style: dotted;
+  border-color: rgba(0, 0, 0, .1);
+  background-color: #fafafa;
+}
