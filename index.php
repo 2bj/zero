@@ -9,8 +9,8 @@
     ?>
 
     <?php
-    require( 'partials/header.php' );
-
+    require( get_stylesheet_directory().'/partials/header.php' );
+    
     if ( $is_mosaic ) {
 
       $args = array(
